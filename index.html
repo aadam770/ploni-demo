@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:title" content="החתונה של פלוני ופלונית">
+<meta property="og:description" content="יום רביעי, 02.02.28 · אולמי פלוני תל אביב · הקישו לפתיחת ההזמנה">
+<meta property="og:url" content="https://ploni-demo.pages.dev/">
+<meta property="og:image" content="https://ploni-demo.pages.dev/og2.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="הזמנה לחתונה של פלוני ופלונית">
+<link rel="icon" type="image/png" sizes="64x64" href="icons/favicon-64.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#6b1d33">
+<meta name="apple-mobile-web-app-title" content="החתונה של פלוני ופלונית">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>פלוני ופלונית · הזמנה לחתונה</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700;900&family=Assistant:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@1,600&family=Great+Vibes&family=Source+Sans+3:wght@400;500;600;700;800;900&family=Noto+Serif+Display:wght@500;700;900&family=Noto+Sans:wght@400;600;700;800&family=Noto+Serif:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wine:#6b1d33; --wine2:#4a1224; --cream:#ede8e2; --blush:#d9ccd0; --gold:#c9a15a; --ink:#4a1224;
+  --bg1:#efe7e1; --bg2:#ddcfca;
+  --cw:min(84vw,360px,52vh);
+  --ew:calc(var(--cw)*1.1); --eh:calc(var(--ew)*.7);
+}
+@media (prefers-color-scheme:dark){:root{--bg1:#efe7e1;--bg2:#ddcfca}}
+*{box-sizing:border-box;margin:0}
+html,body{background:var(--bg2)}
+body{font-family:'Assistant','Noto Sans',sans-serif;color:var(--ink);overflow-x:hidden}
+.scroll{height:400vh}
+.stage{position:fixed;inset:0;overflow:hidden;
+  background:
+   radial-gradient(120% 80% at 50% 0%,#f6efe9 0%,transparent 60%),
+   repeating-linear-gradient(115deg,rgba(255,255,255,.28) 0 90px,rgba(120,80,80,.07) 160px,rgba(255,255,255,.2) 240px),
+   linear-gradient(180deg,var(--bg1),var(--bg2));
+  --et:0px;--es:1;--eo:1;--cs:18px}
+.stage::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(90% 70% at 50% 50%,transparent 55%,rgba(74,18,36,.16))}
+.abs{position:absolute;left:50%;top:50%}
+.eb,.ef{width:var(--ew);height:var(--eh);margin:calc(var(--eh)/-2) 0 0 calc(var(--ew)/-2);
+  transform:translateY(var(--et)) scale(var(--es));opacity:var(--eo)}
+.eb{z-index:1;background:repeating-linear-gradient(45deg,rgba(255,255,255,.07) 0 5px,transparent 5px 10px),linear-gradient(180deg,#a97b88,#c79ca8);border-radius:24px;box-shadow:0 30px 50px -18px rgba(74,18,36,.45),0 6px 14px rgba(74,18,36,.18)}
+.ef{z-index:3;pointer-events:none}
+.pk{position:absolute;inset:0;filter:drop-shadow(0 -3px 4px rgba(74,18,36,.28)) drop-shadow(0 0 1px rgba(120,80,80,.5))}
+.pk i{position:absolute;inset:0;border-radius:24px}
+.pk .l{background:linear-gradient(100deg,#f5eee8,#e3d5cf);clip-path:polygon(0 0,52% 54%,0 100%)}
+.pk .r{background:linear-gradient(260deg,#f0e7e0,#ddccc6);clip-path:polygon(100% 0,48% 54%,100% 100%)}
+.pk .b{background:linear-gradient(180deg,#f9f3ee,#e7dad3);clip-path:polygon(0 100%,50% 44%,100% 100%)}
+.fl{position:absolute;left:0;top:0;width:100%;height:58%;transform-origin:50% 0;pointer-events:none;transform-style:preserve-3d}
+.fl .ff,.fl .fb{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.fl .ff{background:linear-gradient(180deg,#f8f2ec,#dfcfc8)}
+.fl .fb{background:linear-gradient(0deg,#b3848f,#d0a8b3);transform:rotateY(180deg)}
+.fw{z-index:4}
+.seal{position:absolute;left:50%;top:55%;width:calc(var(--ew)*.24);aspect-ratio:1;margin:calc(var(--ew)*-.12) 0 0 calc(var(--ew)*-.12);padding:0;border:0;background:none;cursor:pointer;pointer-events:auto;z-index:5;filter:drop-shadow(0 6px 6px rgba(50,10,25,.5));-webkit-tap-highlight-color:transparent}
+.seal svg{width:100%;height:100%;overflow:visible;display:block;transition:transform .25s cubic-bezier(.3,1.6,.5,1)}
+.seal:hover svg{transform:scale(1.07) rotate(-2deg)}.seal:active svg{transform:scale(.94)}
+.seal::before{content:"";position:absolute;inset:4%;border-radius:50%;border:1.5px solid rgba(201,161,90,.8);animation:pulse 2.4s ease-out infinite;pointer-events:none}
+@keyframes pulse{0%{transform:scale(.85);opacity:.9}100%{transform:scale(1.5);opacity:0}}
+.seal:focus-visible{outline:2px solid var(--gold);outline-offset:6px;border-radius:50%}
+.card{z-index:2;width:var(--cw);height:calc(var(--cw)*1.42);margin:calc(var(--cw)*-.71) 0 0 calc(var(--cw)/-2);perspective:1400px;will-change:transform}
+.pop,.flip{position:absolute;inset:0;transform-style:preserve-3d}
+.pop.blop{animation:blop .95s cubic-bezier(.3,1.5,.5,1)}
+@keyframes blop{0%{transform:scale(1)}28%{transform:scale(1.11,1.07)}52%{transform:scale(.955,.975)}76%{transform:scale(1.02)}100%{transform:scale(1)}}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:1.6cqw;overflow:hidden;container-type:inline-size;
+  box-shadow:0 var(--cs) calc(var(--cs)*2.2) -10px rgba(74,18,36,.5),0 2px 6px rgba(74,18,36,.25);text-align:center}
+.face.front{background:linear-gradient(170deg,#f3eee9,#e4ddd5)}
+.face.back{transform:rotateY(180deg);background:
+  radial-gradient(120% 90% at 20% 0%,#f6f1ec,transparent 70%),linear-gradient(170deg,#f0ebe5,#e2dad2)}
+.wine{position:absolute;left:0;right:0;top:0;height:63%;background:
+  radial-gradient(90% 70% at 30% 20%,rgba(255,255,255,.14),transparent 60%),
+  repeating-linear-gradient(35deg,rgba(255,255,255,.03) 0 2px,transparent 2px 5px),
+  linear-gradient(160deg,#7d2740,var(--wine) 45%,var(--wine2));
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5cqw}
+.wine::before{content:"";position:absolute;inset:3.5cqw;border:1px solid rgba(201,161,90,.55);border-radius:1cqw}
+.mono{font:italic 600 5.2cqw 'Cormorant Garamond',serif;letter-spacing:.35em;padding-left:.35em;color:#e6cc92;direction:ltr}
+.names{display:flex;align-items:center;gap:3cqw;direction:rtl;font:900 14.5cqw/1 'Frank Ruhl Libre','Noto Serif',serif;
+  background:linear-gradient(100deg,#f6e7bb,#c9a15a 35%,#f0dba2 55%,#a67c3c);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 2px rgba(0,0,0,.35))}
+.names em{font:italic 600 11cqw 'Cormorant Garamond',serif}
+.rule{width:22cqw;height:1px;background:linear-gradient(90deg,transparent,#d9bd80,transparent)}
+.info{position:absolute;left:0;right:0;top:63%;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4.2cqw;padding:0 7cqw}
+.date{font:700 5.2cqw/1.3 'Frank Ruhl Libre','Noto Serif',serif;color:var(--wine)}
+.date small{display:block;font:700 7.2cqw 'Assistant','Noto Sans';letter-spacing:.08em;margin-top:1.4cqw;direction:ltr}
+.venue{background:var(--blush);color:#5b3a44;font:600 5.4cqw 'Frank Ruhl Libre','Noto Serif',serif;padding:2.6cqw 7cqw;border-radius:1cqw;width:100%}
+.in{position:absolute;inset:3.2cqw;border:1px solid rgba(107,29,51,.55);padding:7cqw 5cqw;display:flex;flex-direction:column;justify-content:space-between;gap:3cqw}
+.in h3{font:700 6.6cqw 'Frank Ruhl Libre','Noto Serif',serif;color:var(--wine);margin-bottom:1.6cqw}
+.in p{font-size:4cqw;line-height:1.5}
+.in strong{color:var(--wine);font-weight:700}
+.band{background:rgba(201,170,178,.55);margin:0 -5cqw;padding:3.6cqw 4cqw}
+.fl2{display:flex;align-items:center;gap:2.5cqw;justify-content:center;color:var(--gold)}
+.fl2::before,.fl2::after{content:"";flex:1;max-width:20cqw;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.fl2::after{transform:scaleX(-1)}
+.fl2 span{width:1.6cqw;aspect-ratio:1;background:var(--gold);transform:rotate(45deg)}
+.par{display:grid;grid-template-columns:1fr 1fr;gap:3cqw;font-size:3.5cqw;line-height:1.45}
+.par span{display:block;color:#7a6a70;font-size:3.2cqw}
+.par b{display:block;color:var(--wine);font-weight:700;margin:.6cqw 0}
+.hint{position:absolute;left:0;right:0;bottom:calc(5vh + env(safe-area-inset-bottom,0px));text-align:center;z-index:9;font:400 15px 'Frank Ruhl Libre','Noto Serif',serif;color:var(--wine);transition:opacity .3s;pointer-events:none}
+.hint::after{content:"";display:block;width:14px;height:14px;margin:10px auto 0;border:solid var(--wine);border-width:0 2px 2px 0;transform:rotate(45deg);animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(7px) rotate(45deg)}}
+.ring{position:absolute;left:50%;top:50%;width:var(--cw);aspect-ratio:1;margin:calc(var(--cw)*-.5) 0 0 calc(var(--cw)*-.5);border-radius:50%;border:2px solid var(--gold);opacity:0;z-index:1;pointer-events:none}
+.ring.go{animation:ring 1.1s ease-out}
+@keyframes ring{0%{opacity:.8;transform:scale(.5)}100%{opacity:0;transform:scale(1.9)}}
+.sp{position:absolute;left:50%;top:50%;width:6px;height:6px;border-radius:50%;background:radial-gradient(#fff3c9,var(--gold));z-index:6;pointer-events:none;animation:sp 1s ease-out forwards}
+@keyframes sp{to{transform:translate(var(--x),var(--y)) scale(.2);opacity:0}}
+@media (prefers-reduced-motion:reduce){.hint::after{animation:none}}
+
+html{scroll-behavior:auto}
+.after{position:relative;z-index:20;border-radius:40px 40px 0 0;box-shadow:0 -30px 70px rgba(74,18,36,.3);padding:10vh 5vw 14vh;overflow:hidden;
+  background:radial-gradient(120% 50% at 50% 0%,#f6efe9,transparent 70%),repeating-linear-gradient(115deg,rgba(255,255,255,.28) 0 90px,rgba(120,80,80,.06) 160px,rgba(255,255,255,.2) 240px),linear-gradient(180deg,#efe7e1,#ddcfca)}
+.after>*:not(canvas){position:relative;z-index:1}
+.after h2{font:900 clamp(34px,9vw,62px)/1.1 'Frank Ruhl Libre','Noto Serif',serif;color:var(--wine);text-align:center}
+.orn{display:flex;align-items:center;gap:12px;justify-content:center;margin:18px auto 0;width:min(70vw,260px);color:var(--gold)}
+.orn::before,.orn::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}.orn::after{transform:scaleX(-1)}
+.orn i{width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+.inv{width:min(92vw,540px);margin:7vh auto 0;perspective:1200px}
+.inv img{display:block;width:100%;height:auto;border-radius:20px;box-shadow:0 40px 70px -25px rgba(74,18,36,.55),0 8px 18px rgba(74,18,36,.18);transition:transform .25s ease-out;transform-style:preserve-3d}
+.rv{opacity:0;transform:translateY(60px) rotateX(10deg);transition:opacity .9s ease,transform 1.1s cubic-bezier(.2,.8,.2,1)}
+.rv.on{opacity:1;transform:none}
+.cd{margin-top:12vh;text-align:center}
+.when{margin-top:14px;font:600 clamp(15px,4vw,19px) 'Assistant','Noto Sans',sans-serif;color:#6b4a54}
+.dw{position:relative;display:inline-block;margin:7vh auto 5vh}
+.dw::before{content:"";position:absolute;inset:-14%;border-radius:50%;background:conic-gradient(from 0deg,transparent,rgba(201,161,90,.55),transparent 40%,rgba(201,161,90,.35),transparent 80%);filter:blur(28px);animation:spin 9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hms{display:flex;justify-content:center;gap:clamp(10px,3vw,26px);position:relative}
+.u1{text-align:center;position:relative}
+.u1 label{display:block;margin-top:14px;font:700 clamp(15px,4vw,20px) 'Frank Ruhl Libre','Noto Serif',serif;color:var(--wine)}
+.tile{--tw:min(26vw,128px);--th:calc(var(--tw)*.95);position:relative;width:var(--tw);height:var(--th);perspective:700px;font:800 calc(var(--tw)*.64)/1 'Assistant','Noto Sans',sans-serif;font-variant-numeric:tabular-nums;direction:ltr;margin:0 auto;filter:drop-shadow(0 18px 18px rgba(74,18,36,.35))}
+.tile.big{--tw:min(56vw,250px)}
+.tile .h{position:absolute;left:0;right:0;height:50%;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.tile .h span{position:absolute;left:0;right:0;height:var(--th);line-height:var(--th);text-align:center;color:#ecd49a;text-shadow:0 2px 0 rgba(0,0,0,.35)}
+.tile .u,.tile .fu{top:0;border-radius:calc(var(--tw)*.1) calc(var(--tw)*.1) 0 0;background:linear-gradient(165deg,#86293f,var(--wine))}
+.tile .d,.tile .fd{bottom:0;border-radius:0 0 calc(var(--tw)*.1) calc(var(--tw)*.1);background:linear-gradient(165deg,var(--wine),#3b0c1b)}
+.tile .u span,.tile .fu span{top:0}.tile .d span,.tile .fd span{bottom:0}
+.tile .fu{transform-origin:50% 100%;z-index:2}.tile .fd{transform-origin:50% 0;transform:rotateX(90deg);z-index:2}
+.tile.flipping .fu{animation:fu .32s ease-in forwards}.tile.flipping .fd{animation:fd .32s .32s ease-out forwards}
+@keyframes fu{to{transform:rotateX(-90deg)}}@keyframes fd{to{transform:rotateX(0)}}
+.tile::after{content:"";position:absolute;left:0;right:0;top:calc(50% - 1px);height:2px;background:rgba(20,2,8,.65);z-index:3;box-shadow:0 1px 0 rgba(201,161,90,.35)}
+.tile.big::before,.tile.sec::before{content:"";position:absolute;z-index:4;top:50%;width:calc(var(--tw)*.05);aspect-ratio:1;border-radius:50%;background:var(--gold);left:calc(var(--tw)*.05);transform:translateY(-50%)}
+.tile.sec::before{animation:tk 1s steps(2) infinite}@keyframes tk{50%{opacity:.15}}
+.done{margin-top:6vh;font:900 clamp(26px,7vw,44px) 'Frank Ruhl Libre','Noto Serif',serif;color:var(--wine);display:none}
+.place{margin-top:7vh;font:400 clamp(15px,4vw,19px)/1.6 'Frank Ruhl Libre','Noto Serif',serif;color:#6b4a54}
+@media (prefers-reduced-motion:reduce){.dw::before{animation:none}.rv{transition:none}}
+
+.tear{display:none;width:var(--ew);height:var(--eh);margin:calc(var(--eh)/-2) 0 0 calc(var(--ew)/-2);z-index:6;pointer-events:none;border-radius:24px;
+  background:repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 5px,transparent 5px 10px),linear-gradient(180deg,#f7f0ea,#e2d3cb);filter:drop-shadow(0 10px 14px rgba(74,18,36,.35))}
+#t1{clip-path:polygon(0 0,100% 0,100% 50%,92% 46%,85% 54%,77% 47%,69% 55%,61% 48%,53% 56%,45% 47%,37% 55%,29% 48%,21% 54%,13% 46%,6% 52%,0 47%)}
+#t2{clip-path:polygon(0 47%,6% 52%,13% 46%,21% 54%,29% 48%,37% 55%,45% 47%,53% 56%,61% 48%,69% 55%,77% 47%,85% 54%,92% 46%,100% 50%,100% 100%,0 100%)}
+.tearing .eb,.tearing .ef,.tearing .fw{visibility:hidden}
+.tearing .tear{display:block}
+.frame{position:relative;margin:7vh auto 0;width:min(92vw,520px);padding:clamp(34px,8vw,52px) clamp(16px,4vw,30px) clamp(30px,7vw,44px);border-radius:30px;
+  background:radial-gradient(120% 80% at 50% 0%,rgba(255,255,255,.7),transparent 70%),linear-gradient(170deg,#f4ece6,#e6d8d1);
+  box-shadow:0 40px 70px -30px rgba(74,18,36,.55),0 3px 8px rgba(74,18,36,.15),inset 0 1px 0 #fff}
+.frame::before{content:"";position:absolute;inset:10px;border:2px solid var(--wine);border-radius:21px;pointer-events:none}
+.frame::after{content:"";position:absolute;inset:17px;border:1px solid var(--gold);border-radius:15px;pointer-events:none}
+.frame .c{position:absolute;width:15px;height:15px;background:var(--gold);transform:rotate(45deg);border:3px solid #f1e8e2;box-shadow:0 0 0 1.5px var(--wine);z-index:2}
+.frame .c1{top:2.5px;left:50%;margin-left:-7px}.frame .c2{bottom:2.5px;left:50%;margin-left:-7px}.frame .c3{left:2.5px;top:50%;margin-top:-7px}.frame .c4{right:2.5px;top:50%;margin-top:-7px}
+.frame .dw{margin:0 auto 5vh}.frame .hms{margin:0}
+
+.plate{position:relative;margin:7vh auto 0;width:min(90vw,500px);padding:10px;border-radius:44px;
+  background:linear-gradient(145deg,#fffaf6 0%,#e9d6d3 45%,#c9a8b0 100%);
+  box-shadow:0 60px 90px -35px rgba(74,18,36,.65),0 24px 40px -18px rgba(74,18,36,.4),0 2px 0 #fff inset,0 -3px 6px rgba(120,60,80,.25) inset}
+.plate::before{content:"";position:absolute;inset:0;border-radius:44px;background:radial-gradient(70% 45% at 30% 0%,rgba(255,255,255,.85),transparent 70%);pointer-events:none}
+.plate-in{position:relative;border-radius:36px;padding:clamp(30px,8vw,50px) clamp(14px,4vw,28px) clamp(28px,7vw,42px);
+  background:radial-gradient(90% 70% at 50% 0%,#f9efe9,#ead8d5 60%,#dcc3c8);
+  box-shadow:inset 0 10px 24px rgba(120,60,80,.22),inset 0 -8px 18px rgba(255,255,255,.7),inset 0 0 0 1px rgba(255,255,255,.6)}
+.plate .dw{margin:0 auto 5vh}.plate .hms{margin:0}
+.tile{filter:drop-shadow(0 22px 16px rgba(74,18,36,.45)) drop-shadow(0 4px 4px rgba(74,18,36,.3))}
+.tile .u,.tile .fu{background:linear-gradient(165deg,#a0314c,#7a1f38 60%,#6b1d33)}
+.tile .d,.tile .fd{background:linear-gradient(165deg,#6b1d33,#3b0c1b)}
+.tile .h span{color:#f4e3b4;text-shadow:0 2px 3px rgba(0,0,0,.45)}
+.tile .u::after,.tile .fu::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.2),transparent 55%);pointer-events:none}
+.top{position:absolute;left:0;right:0;top:calc(13vh + env(safe-area-inset-top,0px));text-align:center;z-index:7;pointer-events:none;color:var(--wine)}
+.top .s{font:600 clamp(14px,3.8vw,18px) 'Frank Ruhl Libre','Noto Serif',serif;letter-spacing:.02em;opacity:.85}
+.top .n{font:900 clamp(34px,10vw,52px)/1.1 'Frank Ruhl Libre','Noto Serif',serif;margin:6px 0 8px;background:linear-gradient(100deg,#7a1f38,#6b1d33 40%,#a67c3c 52%,#6b1d33 62%,#4a1224);-webkit-background-clip:text;background-clip:text;color:transparent}
+.top .n em{font:italic 600 .8em 'Cormorant Garamond',serif}
+.top .o{display:flex;align-items:center;gap:10px;justify-content:center;width:min(60vw,220px);margin:0 auto;color:var(--gold)}
+.top .o::before,.top .o::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}.top .o::after{transform:scaleX(-1)}
+.top .o i{width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
+.sparks{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.fl{height:54%}
+
+.plate{width:min(88vw,540px);margin:9vh auto 12vh;padding:0;border-radius:34px;
+  background:radial-gradient(120% 90% at 20% 0%,#9a3350,transparent 60%),linear-gradient(160deg,#84263f,#6b1d33 50%,#3a0b19);
+  box-shadow:0 50px 80px -30px rgba(74,18,36,.75),0 14px 26px -10px rgba(74,18,36,.5),inset 0 2px 0 rgba(255,255,255,.28),inset 0 -6px 14px rgba(0,0,0,.35)}
+.plate::before{border-radius:34px;background:radial-gradient(80% 50% at 30% 0%,rgba(255,255,255,.22),transparent 70%)}
+.plate::after{content:"";position:absolute;inset:9px;border-radius:26px;border:1px solid rgba(232,201,127,.6);box-shadow:inset 0 0 0 4px rgba(232,201,127,.07);pointer-events:none}
+.plate-in{display:flex;direction:ltr;justify-content:center;align-items:flex-start;gap:clamp(7px,2vw,14px);background:none;box-shadow:none;border-radius:0;padding:clamp(26px,6.5vw,38px) clamp(18px,4.5vw,30px) clamp(20px,5vw,28px)}
+.plate .dw{margin:0;display:block}.plate .dw::before{display:none}.plate .hms{display:contents}
+.plate .u1 label{color:#ecd9a6;font:700 clamp(12px,3.2vw,16px) 'Frank Ruhl Libre','Noto Serif',serif;margin-top:12px}
+.tile,.tile.big{--tw:min(18.5vw,100px);--th:calc(var(--tw)*1.1);filter:drop-shadow(0 12px 9px rgba(20,2,8,.55)) drop-shadow(0 2px 2px rgba(20,2,8,.4))}
+.tile .u,.tile .fu{border-radius:calc(var(--tw)*.26) calc(var(--tw)*.26) 0 0;background:linear-gradient(180deg,#fffaf4,#f0e3d9)}
+.tile .d,.tile .fd{border-radius:0 0 calc(var(--tw)*.26) calc(var(--tw)*.26);background:linear-gradient(180deg,#e9d9cd,#cfb9ac)}
+.tile .u::after,.tile .fu::after{display:none}
+.tile .h span{color:#6b1d33;text-shadow:0 1px 0 rgba(255,255,255,.7)}
+.tile::after{background:rgba(74,18,36,.4);box-shadow:0 1px 0 rgba(255,255,255,.55)}
+.tile.big::before,.tile.sec::before{display:none}
+
+.cd h2.rv{margin-bottom:0}
+.plate-in{flex-direction:column;align-items:center;gap:clamp(20px,5.5vw,28px)}
+.plate .hms{display:flex;direction:ltr;justify-content:center;gap:clamp(8px,2.4vw,14px)}
+.plate .dw .tile{--tw:min(27vw,128px)}
+.plate .hms .tile{--tw:min(21vw,100px)}
+.inv{position:relative;cursor:zoom-in}
+.inv .mag{position:absolute;left:14px;bottom:14px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgba(255,250,246,.92);box-shadow:0 8px 16px rgba(74,18,36,.4);pointer-events:none}
+.inv:focus-visible{outline:2px solid var(--gold);outline-offset:6px;border-radius:20px}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(40,8,18,.88);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);opacity:0;transition:opacity .3s}
+.lb:not([hidden]){display:block}
+.lb.on{opacity:1}
+.lbs{position:absolute;inset:0;overflow:auto;display:grid;place-items:center;-webkit-overflow-scrolling:touch}
+.lbs img{display:block;width:auto;height:auto;max-width:min(96vw,760px);max-height:92vh;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.6);cursor:zoom-in;transform:scale(.92);transition:transform .35s cubic-bezier(.2,.9,.3,1.2)}
+.lb.on .lbs img{transform:none}
+.lbs.zoom{place-items:start}
+.lbs.zoom img{max-width:none;max-height:none;width:max(210vw,1100px);cursor:zoom-out;transform:none}
+.lbx{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:14px;z-index:2;width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.18);display:grid;place-items:center;cursor:pointer}
+.lbx:focus-visible{outline:2px solid var(--gold)}
+
+.after h2{font-family:'Assistant','Noto Sans',sans-serif;font-weight:800}
+.ph{text-align:center}
+.ph h3{font:800 clamp(24px,6.6vw,34px)/1.1 'Assistant','Noto Sans',sans-serif;color:#f6e7bd;text-shadow:0 2px 6px rgba(0,0,0,.35)}
+.ph .orn{margin:12px auto 0;width:min(50vw,190px)}
+.plate .u1 label{font:700 clamp(13px,3.4vw,16px) 'Assistant','Noto Sans',sans-serif;letter-spacing:.02em}
+.plate-in{padding-top:clamp(24px,6vw,34px)}
+.nav{display:flex;gap:12px;justify-content:center;margin:6vh auto 0;width:min(90vw,540px)}
+.nb{flex:1 1 0;min-width:0;white-space:nowrap;display:flex;align-items:center;justify-content:center;gap:10px;padding:15px 12px;border-radius:999px;text-decoration:none;color:var(--wine);font:700 16px 'Assistant','Noto Sans',sans-serif;
+  background:linear-gradient(180deg,#fffaf4,#eadbd0);box-shadow:0 18px 28px -14px rgba(74,18,36,.55),0 3px 6px rgba(74,18,36,.18),inset 0 1px 0 #fff,inset 0 -3px 6px rgba(120,70,70,.15);transition:transform .2s,box-shadow .2s;-webkit-tap-highlight-color:transparent}
+.nb:hover{transform:translateY(-3px);box-shadow:0 24px 32px -14px rgba(74,18,36,.6),0 3px 6px rgba(74,18,36,.18),inset 0 1px 0 #fff}
+.nb:active{transform:scale(.97)}
+.nb:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+.nb{font-weight:800}
+.nb-w{color:#f6e7bd;background:linear-gradient(180deg,#9a3350,#6b1d33 55%,#4a1224);box-shadow:0 18px 28px -14px rgba(74,18,36,.75),0 3px 6px rgba(74,18,36,.25),inset 0 1px 0 rgba(255,255,255,.3),inset 0 -3px 6px rgba(0,0,0,.3)}
+.nb-g{color:#4a1224;background:linear-gradient(180deg,#f8e7b4,#d9b46a 60%,#b98c43);box-shadow:0 18px 28px -14px rgba(110,75,20,.7),0 3px 6px rgba(110,75,20,.25),inset 0 1px 0 rgba(255,255,255,.6),inset 0 -3px 6px rgba(110,75,20,.3)}
+.nb-c{width:100%;color:var(--wine)}
+.nav{margin:3vh auto 0}
+.calw{width:min(90vw,540px);margin:3vh auto 0}
+.way{margin-top:16vh;text-align:center}
+.mapcard{position:relative;width:min(90vw,540px);height:clamp(200px,52vw,260px);margin:5vh auto 0;border-radius:28px;overflow:hidden;cursor:pointer;border:4px solid #fbf5f0;
+  box-shadow:0 40px 60px -28px rgba(74,18,36,.65),0 6px 14px rgba(74,18,36,.2)}
+.mp{position:absolute;inset:0;overflow:hidden;background:
+  linear-gradient(32deg,transparent 44%,rgba(255,255,255,.75) 44% 49%,transparent 49%),
+  linear-gradient(-58deg,transparent 30%,rgba(255,255,255,.6) 30% 33%,transparent 33%),
+  linear-gradient(8deg,transparent 60%,rgba(255,248,235,.8) 60% 64%,transparent 64%),
+  radial-gradient(60% 50% at 20% 80%,#d6dfc6,transparent 70%),#e6d6cc}
+.mp img{position:absolute;width:256px;height:256px;max-width:none;filter:sepia(.28) saturate(.75) hue-rotate(-14deg) contrast(.96) brightness(1.03);user-select:none;-webkit-user-drag:none}
+.pinw{position:absolute;left:50%;top:50%;width:0;height:0;pointer-events:none;z-index:3}
+.pin{position:absolute;left:-20px;top:-52px;filter:drop-shadow(0 8px 5px rgba(50,10,25,.5));animation:pinb 2.2s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes pinb{0%,100%{transform:translateY(0)}45%{transform:translateY(-9px)}}
+.chip{position:absolute;left:0;top:-98px;transform:translateX(-50%);white-space:nowrap;background:#fffaf4;color:var(--wine);font:800 13px 'Assistant','Noto Sans',sans-serif;padding:7px 13px;border-radius:999px;box-shadow:0 8px 16px rgba(74,18,36,.35)}
+.chip::after{content:"";position:absolute;left:50%;bottom:-5px;width:10px;height:10px;background:#fffaf4;transform:translateX(-50%) rotate(45deg)}
+.osm{position:absolute;right:8px;bottom:6px;z-index:4;font:600 10px 'Assistant','Noto Sans',sans-serif;color:#5b3a44;background:rgba(255,255,255,.75);padding:2px 6px;border-radius:6px;pointer-events:none}
+.mapcard .mag{position:absolute;left:12px;bottom:12px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgba(255,250,246,.95);box-shadow:0 8px 16px rgba(74,18,36,.4);z-index:4}
+.mapcard:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.mlb{position:fixed;inset:0;z-index:100;background:rgba(40,8,18,.88);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);opacity:0;transition:opacity .3s;display:none;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:0 4vw}
+.mlb:not([hidden]){display:flex}.mlb.on{opacity:1}
+.mpanel{position:relative;width:min(94vw,760px);height:min(66vh,560px);border-radius:26px;overflow:hidden;border:4px solid #fbf5f0;box-shadow:0 40px 90px rgba(0,0,0,.6);transform:scale(.93);transition:transform .35s cubic-bezier(.2,.9,.3,1.2)}
+.mlb.on .mpanel{transform:none}
+.mbtns{width:min(94vw,760px)}.mbtns .nav{width:100%;margin:0}
+.sheet{position:fixed;inset:0;z-index:110;display:none}.sheet:not([hidden]){display:block}
+.sh-bg{position:absolute;inset:0;background:rgba(40,8,18,.6);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.sh-box{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:min(100vw,480px);padding:22px 20px calc(26px + env(safe-area-inset-bottom,0px));display:grid;gap:12px;border-radius:30px 30px 0 0;background:linear-gradient(180deg,#f8f1ec,#e9d9d3);box-shadow:0 -30px 60px rgba(0,0,0,.35)}
+.sh-t{text-align:center;font:800 19px 'Assistant','Noto Sans',sans-serif;color:var(--wine);margin-bottom:4px}
+.fin{position:relative;margin-top:16vh;min-height:62vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.fwk{position:absolute;inset:-30vh 0 0 0;width:100%;height:calc(100% + 30vh);pointer-events:none;z-index:2}
+.mz{display:flex;justify-content:center;gap:.04em;direction:rtl;font:800 clamp(56px,19vw,110px)/1.05 'Assistant','Noto Sans',sans-serif;position:relative;z-index:3}
+.mz span{display:inline-block;opacity:0;transform:scale(.2) translateY(30px);background:linear-gradient(170deg,#b8456a,#6b1d33 45%,#c9a15a);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 8px rgba(74,18,36,.3))}
+.mz.show span{animation:lt .9s cubic-bezier(.3,1.7,.5,1) forwards;animation-delay:calc(var(--i)*80ms)}
+.mz .wsp{width:.3em;flex:0 0 .3em;background:none;opacity:0}
+@keyframes lt{0%{opacity:0;transform:scale(.2) translateY(30px)}60%{opacity:1;transform:scale(1.25) translateY(-6px)}100%{opacity:1;transform:none}}
+.pw{position:relative;z-index:3;margin-top:12vh;display:flex;flex-direction:column;align-items:center;gap:6px;font-family:'Cinzel',serif}
+.pw::before{content:"";width:46px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin-bottom:10px}
+.pw span{font-weight:500;font-size:12px;letter-spacing:.32em;text-transform:lowercase;color:#8a6b74}
+.pw b{font-weight:800;font-size:22px;letter-spacing:.04em;background:linear-gradient(100deg,#4a1224,#a67c3c 55%,#4a1224);-webkit-background-clip:text;background-clip:text;color:transparent}
+@media (prefers-reduced-motion:reduce){.pin{animation:none}.mz span{opacity:1;transform:none;animation:none!important}}
+
+.tl{margin-top:14vh;text-align:center}
+.tl-list{position:relative;direction:rtl;width:min(88vw,460px);margin:6vh auto 0;display:grid;gap:clamp(70px,16vh,120px);padding:6px 0}
+.tl-it{display:grid;grid-template-columns:1fr 34px 1fr;align-items:center;gap:6px;position:relative;z-index:2}
+.tl-tx{text-align:right;padding-left:4px;opacity:.38;transform:translateX(10px);transition:opacity .6s,transform .7s cubic-bezier(.2,.8,.2,1)}
+.tl-tx b{display:block;font:800 clamp(20px,5.6vw,26px)/1.15 'Assistant','Noto Sans',sans-serif;color:var(--wine)}
+.tl-tx span{display:block;margin-top:5px;font:600 clamp(13px,3.6vw,16px)/1.35 'Assistant','Noto Sans',sans-serif;color:#7a5a64}
+.tl-tm{text-align:left;direction:ltr;font:800 clamp(30px,9vw,44px)/1 'Assistant','Noto Sans',sans-serif;color:#b9a2a9;transition:color .6s,text-shadow .6s;font-variant-numeric:tabular-nums}
+.tl-dot{position:relative;width:34px;height:34px;display:grid;place-items:center;justify-self:center}
+.tl-dot i{position:relative;width:20px;height:20px;border-radius:50%;background:#efe4de;border:3px solid #c9b3ba;box-shadow:0 0 0 6px rgba(239,228,222,.9);transition:background .5s,border-color .5s,box-shadow .6s,transform .5s cubic-bezier(.3,1.8,.5,1)}
+.tl-dot::after{content:"";position:absolute;inset:3px;border-radius:50%;border:2px solid var(--gold);opacity:0}
+.tl-it.on .tl-dot i{background:radial-gradient(circle at 35% 30%,#fff3c9,#e8c97f 45%,#c9a15a);border-color:#a67c3c;transform:scale(1.18);box-shadow:0 0 0 6px rgba(239,228,222,.9),0 0 22px 6px rgba(232,201,127,.85),0 0 48px 14px rgba(232,201,127,.4)}
+.tl-it.on .tl-dot::after{animation:tlr 1.8s ease-out infinite}
+@keyframes tlr{0%{opacity:.9;transform:scale(.7)}100%{opacity:0;transform:scale(2.3)}}
+.tl-it.on .tl-tx{opacity:1;transform:none}
+.tl-it.on .tl-tm{color:var(--wine);text-shadow:0 4px 14px rgba(232,201,127,.7)}
+.tl-track,.tl-fill{position:absolute;left:50%;top:0;bottom:0;width:4px;margin-left:-2px;border-radius:4px;z-index:1}
+.tl-track{background:linear-gradient(180deg,rgba(185,162,169,.25),rgba(185,162,169,.5))}
+.tl-fill{height:0;bottom:auto;background:linear-gradient(180deg,#e8c97f,#c9a15a 45%,#6b1d33);box-shadow:0 0 14px rgba(232,201,127,.8);transition:height .25s linear}
+.pw{margin-top:22vh;gap:4px}.pw::before{margin-bottom:8px;width:32px}
+.pw span{font-size:9.5px;letter-spacing:.34em}.pw b{font-size:15px}
+.fin{min-height:84vh}
+.mz.show span{animation:lt 1.1s cubic-bezier(.3,1.9,.5,1) forwards,shim 3.2s ease-in-out 1.4s infinite;animation-delay:calc(var(--i)*90ms),calc(1.4s + var(--i)*120ms)}
+.mz span{background-size:100% 220%;background-position:0 0}
+@keyframes lt{0%{opacity:0;transform:scale(.1) translateY(60px) rotate(-14deg);filter:blur(8px) drop-shadow(0 0 0 #e8c97f)}55%{opacity:1;transform:scale(1.45) translateY(-12px) rotate(4deg);filter:blur(0) drop-shadow(0 0 26px #e8c97f)}100%{opacity:1;transform:none;filter:drop-shadow(0 6px 8px rgba(74,18,36,.3))}}
+@keyframes shim{0%,100%{background-position:0 0;filter:drop-shadow(0 6px 8px rgba(74,18,36,.3))}50%{background-position:0 100%;filter:drop-shadow(0 0 14px rgba(232,201,127,.9))}}
+@media (prefers-reduced-motion:reduce){.tl-fill{transition:none}.tl-it.on .tl-dot::after{animation:none}}
+
+.tl .tl-list{--tw:clamp(78px,23vw,108px);width:min(90vw,480px);grid-template-columns:1fr;gap:clamp(64px,14vh,110px);margin-top:6vh}
+.tl .tl-it{grid-template-columns:var(--tw) 34px 1fr;gap:10px;align-items:start}
+.tl .tl-tm{text-align:right;direction:ltr;justify-self:end;font:700 clamp(26px,8vw,38px)/1.1 'Assistant','Noto Sans',sans-serif;padding-top:2px;letter-spacing:.01em}
+.tl .tl-dot{margin-top:4px}
+.tl .tl-tx{text-align:right;padding:0;transform:translateX(-10px)}
+.tl .tl-it.on .tl-tx{transform:none}
+.tl .tl-tx b{font:900 clamp(24px,7vw,32px)/1.15 'Frank Ruhl Libre','Noto Serif',serif}
+.tl .tl-tx span{font:500 clamp(15px,4.2vw,18px)/1.5 'Assistant','Noto Sans',sans-serif;margin-top:8px;color:#6b4a54}
+.tl .tl-tx a{display:inline-block;margin-top:14px;font:800 clamp(14px,3.8vw,16px) 'Assistant','Noto Sans',sans-serif;color:#8a5f1c;text-decoration:none;border-bottom:1.5px solid rgba(201,161,90,.7);padding-bottom:2px}
+.tl .tl-tx a em{font-style:normal;display:inline-block;transition:transform .25s}.tl .tl-tx a:hover em{transform:translateX(-4px)}
+.tl .tl-track,.tl .tl-fill{left:auto;right:calc(var(--tw) + 10px + 15px);margin-left:0;top:0}
+.tl .tl-track{height:0}
+.mapcard{height:clamp(260px,74vw,340px)}
+.mapcard .gm{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:2;background:#eadbd3}
+.mapcard.live{cursor:default}.mapcard.live .pinw,.mapcard.live .osm,.mapcard.live .mag{display:none}
+.vn{width:min(90vw,540px);margin:3.5vh auto 0;text-align:center}
+.vn h3{font:900 clamp(26px,7.4vw,34px)/1.15 'Frank Ruhl Libre','Noto Serif',serif;color:var(--wine)}
+.vn p{margin-top:6px;font:500 clamp(15px,4.2vw,18px)/1.5 'Assistant','Noto Sans',sans-serif;color:#7a5a64}
+.cp{margin-top:16px;display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;border:1.5px solid rgba(201,161,90,.8);background:linear-gradient(180deg,#fffaf4,#f1e5dc);color:var(--wine);font:800 15px 'Assistant','Noto Sans',sans-serif;cursor:pointer;box-shadow:0 8px 16px -8px rgba(74,18,36,.4);transition:transform .2s,background .3s}
+.cp:active{transform:scale(.96)}.cp.ok{background:linear-gradient(180deg,#f8e7b4,#e0bd72)}
+.cp:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.fin{padding-bottom:12vh}
+.pw{margin-top:20vh;gap:7px;padding:16px 30px 14px;border-radius:22px;background:linear-gradient(180deg,rgba(255,250,246,.9),rgba(238,224,217,.85));box-shadow:0 18px 30px -16px rgba(74,18,36,.45),inset 0 1px 0 #fff}
+.pw::before{display:none}
+.pw span{font-size:11px;letter-spacing:.3em;color:#6b4a54;font-weight:500}
+.pw b{font-size:22px;letter-spacing:.06em;background:linear-gradient(100deg,#6b1d33,#a67c3c 50%,#6b1d33);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+html,body{overscroll-behavior:none}
+.pw{font-family:'Cinzel',serif}
+.pw span{font-family:'Cinzel',serif;font-weight:500;font-size:10px;letter-spacing:.32em;text-transform:uppercase}
+.pw b{font-family:'Cinzel',serif;font-weight:700;font-size:20px;letter-spacing:.14em;text-transform:uppercase}
+.after{padding-bottom:0}
+.fin{margin-top:6vh;padding-bottom:0;height:100vh;height:100svh;min-height:0;justify-content:space-between;padding-top:0}
+.fin .mz{margin-top:auto}
+.fin .pw{margin:auto 0 calc(5vh + env(safe-area-inset-bottom,0px))}
+.fin::before{content:"";flex:0 0 0}
+
+.fin .mz{margin-top:auto}
+.mzl{position:relative;z-index:3;margin:clamp(14px,3vh,24px) auto 0;max-width:86vw;text-align:center;font:700 clamp(18px,5.2vw,24px)/1.45 'Assistant','Noto Sans',sans-serif;color:var(--wine);opacity:0;transform:translateY(14px);transition:opacity .9s ease 1.5s,transform .9s ease 1.5s}
+.mz.show + .mzl{opacity:1;transform:none}
+.mzl::before{content:"";display:block;width:54px;height:2px;margin:0 auto 14px;border-radius:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.fin .pw{margin-top:auto}
+.pw span{font-family:'Great Vibes',cursive;font-weight:400;font-size:22px;letter-spacing:.02em;text-transform:none;color:#6b4a54;line-height:1}
+.pw b{font-family:'Great Vibes',cursive;font-weight:400;font-size:40px;letter-spacing:.02em;text-transform:none;line-height:1.05;background:linear-gradient(100deg,#6b1d33,#b98c43 50%,#6b1d33);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 4px 4px}
+.pw{padding:12px 34px 10px;gap:2px}
+@media (prefers-reduced-motion:reduce){.mzl{opacity:1;transform:none;transition:none}}
+
+.gchip{position:absolute;left:12px;top:12px;z-index:5;display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:8px;background:#fff;color:#1a73e8;font:600 14px 'Assistant','Noto Sans',sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.mapcard.live .gchip{display:none}
+.mapcard .mag{display:none}
+.vn{margin-top:3vh}.vn .cp{margin-top:0}
+.pw{direction:ltr;flex-direction:row;align-items:baseline;justify-content:center;gap:7px;padding:0;border-radius:0;background:none;box-shadow:none}
+.pw span{font-size:15px;color:rgba(107,74,84,.5)}
+.pw b{font-size:19px;padding:0;opacity:.6;background:linear-gradient(100deg,#6b1d33,#a67c3c 50%,#6b1d33);-webkit-background-clip:text;background-clip:text;color:transparent}
+.fin .pw{margin-bottom:calc(3.5vh + env(safe-area-inset-bottom,0px))}
+
+.vn{margin:2.4vh auto 0;width:auto;text-align:center}
+.cp{margin:0;padding:6px 10px;border:0;border-radius:8px;background:none;box-shadow:none;color:#7a5a64;font:600 14px 'Assistant','Noto Sans',sans-serif;gap:7px;opacity:.9}
+.cp svg{width:16px;height:16px}
+.cp span{border-bottom:1px dotted rgba(122,90,100,.6);padding-bottom:1px}
+.cp:hover{color:var(--wine)}.cp.ok{background:none;color:#8a5f1c}
+.nav{margin:3.2vh auto 0}
+.calw{margin:5vh auto 0;position:relative;padding-top:5vh}
+.calw::before{content:"";position:absolute;top:0;left:50%;width:46px;height:1px;margin-left:-23px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.nb-c{background:rgba(255,250,246,.35);border:1.5px solid rgba(107,29,51,.38);box-shadow:none;font-weight:700;padding:13px 18px}
+.nb-c:hover{background:rgba(255,250,246,.8);transform:none;box-shadow:0 10px 20px -12px rgba(74,18,36,.4)}
+.pw span,.pw b{font-family:'Assistant','Noto Sans',sans-serif;text-transform:none;letter-spacing:.02em}
+.pw span{font-size:12.5px;font-weight:500;color:rgba(107,74,84,.8)}
+.pw b{font-size:13px;font-weight:700;opacity:1;background:none;color:rgba(107,29,51,.85);-webkit-text-fill-color:currentColor;padding:0}
+.pw{gap:5px}
+
+.fin{height:auto;min-height:0;margin-top:0;padding:8vh 0 calc(2.5vh + env(safe-area-inset-bottom,0px));justify-content:flex-start}
+.fin .mz{margin-top:0}
+.fin .pw{margin:9vh 0 0}
+
+.lang{position:fixed;top:calc(10px + env(safe-area-inset-top,0px));left:10px;z-index:60;display:flex;gap:2px;padding:3px;border-radius:999px;background:rgba(255,250,246,.82);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 6px 16px -6px rgba(74,18,36,.45),inset 0 1px 0 #fff;direction:ltr}
+.lang button{border:0;background:none;cursor:pointer;padding:6px 10px;border-radius:999px;font:800 12px 'Assistant','Noto Sans',sans-serif;color:var(--wine);letter-spacing:.02em;-webkit-tap-highlight-color:transparent}
+.gp{display:grid;grid-template-columns:1fr 1fr;gap:16px 14px;margin:26px auto 0;width:min(90vw,420px);font:500 12.8px/1.5 'Assistant','Noto Sans',sans-serif;color:#5b3a44}
+.gp b{color:var(--wine);font-weight:800}
+.gp .gp5{grid-column:1/-1}
+.rsvp{width:min(88vw,380px);margin:12vh auto 0;text-align:center}
+.rsvp[hidden]{display:none}
+.rsvp h2{font-family:'Assistant','Noto Sans',sans-serif;font-weight:800}
+.rsvp form{display:grid;gap:14px;margin-top:24px;text-align:start}
+.rsvp label span{display:block;font:700 14px 'Assistant','Noto Sans',sans-serif;color:var(--wine);margin:0 4px 6px}
+.rsvp input[type=text],.rsvp input[type=tel],.rsvp select{width:100%;height:52px;border-radius:14px;border:1.5px solid rgba(107,29,51,.25);background:rgba(255,250,246,.92);padding:0 14px;font:600 16px 'Assistant','Noto Sans',sans-serif;color:var(--ink);box-shadow:inset 0 2px 4px rgba(74,18,36,.08)}
+.rsvp input:focus,.rsvp select:focus{outline:2px solid var(--gold);outline-offset:1px}
+.rsvp #rb{width:100%;border:0;cursor:pointer;margin-top:6px}
+.rsvp #rb[disabled]{opacity:.6;cursor:default}
+.rmsg{min-height:1.5em;text-align:center;font:700 15px/1.4 'Assistant','Noto Sans',sans-serif;color:var(--wine)}
+.rsvp.sent form>label,.rsvp.sent #rb{display:none}
+html[dir=ltr] .tl .tl-tx{text-align:left;transform:translateX(10px)}
+html[dir=ltr] .tl .tl-track,html[dir=ltr] .tl .tl-fill{right:auto;left:calc(var(--tw) + 25px)}
+html[dir=ltr] .names,html[dir=ltr] .mz{direction:ltr}
+html[dir=ltr] .tl-list{direction:ltr}
+html[lang=en] .names,html[lang=uk] .names{font-size:9.6cqw;gap:2.4cqw}
+html[lang=en] .mz{font-size:clamp(46px,15vw,92px)}
+html[lang=uk] .mz{font-size:clamp(46px,15vw,92px)}
+html[lang=en] .mzl,html[lang=uk] .mzl{font-size:clamp(17px,4.8vw,22px)}
+html[lang=en] .back p,html[lang=uk] .back p{font-size:.94em}
+.lang{padding:4px;gap:6px}
+.lang button{position:relative;width:50px;height:34px;padding:0;border-radius:8px;background-size:cover;background-position:center;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(74,18,36,.25);opacity:.62;transition:opacity .25s,transform .25s}
+.lang button[aria-pressed=true]{opacity:1;transform:scale(1.06);box-shadow:0 0 0 2px #c9a15a,0 4px 10px -3px rgba(74,18,36,.55)}
+.lang button span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);padding:2px 7px;border-radius:999px;background:rgba(40,8,18,.62);color:#fff;font:800 11px/1.3 'Assistant',sans-serif;letter-spacing:.03em}
+html[lang=uk] body,html[lang=uk] body *{font-family:'Source Sans 3','Noto Sans',sans-serif}
+html[lang=uk] .after h2,html[lang=uk] .date,html[lang=uk] .done,html[lang=uk] .hint,html[lang=uk] .in h3,html[lang=uk] .names,html[lang=uk] .place,html[lang=uk] .plate .u1 label,html[lang=uk] .tl .tl-tx b,html[lang=uk] .top .n,html[lang=uk] .top .s,html[lang=uk] .u1 label,html[lang=uk] .venue,html[lang=uk] .vn h3{font-family:'Noto Serif Display','Noto Serif',serif}
+html[lang=uk] .mono{font-family:'Cormorant Garamond',serif}
+html[lang=uk] .mz{font-family:'Noto Serif Display','Noto Serif',serif;font-weight:900}
+html[lang=uk] .after h2,html[lang=uk] .rsvp h2{font-family:'Noto Serif Display','Noto Serif',serif;font-weight:700}
+html[lang=uk] .pw span,html[lang=uk] .pw b{font-family:'Assistant',sans-serif}
+
+.lang{left:50%;transform:translateX(-50%);top:calc(10px + env(safe-area-inset-top,0px));padding:4px;gap:4px}
+.lang button{width:auto;height:auto;min-width:54px;padding:8px 16px;border-radius:999px;background:none;background-image:none;box-shadow:none;overflow:visible;opacity:1;transform:none;color:var(--wine);font:700 14px/1 'Assistant','Noto Sans',sans-serif;transition:background .3s,color .3s,box-shadow .3s}
+.lang button span{position:static;transform:none;padding:0;background:none;color:inherit;font:inherit;letter-spacing:.02em}
+.lang button[aria-pressed=true]{background:linear-gradient(180deg,#9a3350,#6b1d33 60%,#4a1224);color:#f6e7bd;font-weight:800;transform:none;box-shadow:0 6px 12px -4px rgba(74,18,36,.7),inset 0 1px 0 rgba(255,255,255,.3),0 0 0 2px #c9a15a}
+html[lang=uk] .lang button{font-family:'Source Sans 3',sans-serif}
+html[lang=en] .names,html[lang=uk] .names{font-size:10.4cqw;gap:2.4cqw}
+html[lang=en] .names em,html[lang=uk] .names em{font-size:8cqw}
+html[lang=en] .date,html[lang=uk] .date{font-size:4.6cqw;line-height:1.35}
+html[lang=en] .date small,html[lang=uk] .date small{font-size:6.6cqw}
+html[lang=en] .venue,html[lang=uk] .venue{font-size:4.8cqw;padding:2.4cqw 5cqw}
+html[lang=en] .in h3,html[lang=uk] .in h3{font-size:5.4cqw}
+html[lang=en] .in p,html[lang=uk] .in p{font-size:3.3cqw;line-height:1.5}
+html[lang=en] .par,html[lang=uk] .par{font-size:3cqw}
+html[lang=en] .par span,html[lang=uk] .par span{font-size:2.7cqw}
+.pw .pph{font:500 12.5px 'Assistant','Noto Sans',sans-serif;color:rgba(107,74,84,.8);text-decoration:none;letter-spacing:.02em;direction:ltr}
+html[lang=uk] .pw .pph{font-family:'Assistant',sans-serif}
+html[lang=uk] .done,html[lang=uk] .names span{font-family:'Noto Serif Display','Noto Serif',serif}
+html[lang=uk] .after h2,html[lang=uk] .rsvp h2{font-family:'Source Sans 3','Noto Sans',sans-serif;font-weight:800}
+.mz{font-family:'Frank Ruhl Libre','Noto Serif',serif;font-weight:900;letter-spacing:.01em}
+html[lang=uk] .mz{font-family:'Noto Serif Display','Noto Serif',serif;font-weight:900}
+.pw{flex-wrap:wrap;justify-content:center;row-gap:3px}
+.pw .pph{flex:0 0 100%;text-align:center;letter-spacing:.06em}
+.pw b{color:#a67c3c}
+@keyframes lgBlur{0%{filter:blur(0);opacity:1}38%{filter:blur(8px);opacity:.2}62%{filter:blur(8px);opacity:.2}100%{filter:blur(0);opacity:1}}
+@keyframes lgFlash{0%{opacity:0}35%{opacity:1}100%{opacity:0}}
+@keyframes lgTap{0%{transform:scale(1)}30%{transform:scale(.84)}65%{transform:scale(1.1)}100%{transform:scale(1)}}
+@keyframes lgRing{0%{box-shadow:0 0 0 0 rgba(201,161,90,.75)}100%{box-shadow:0 0 0 14px rgba(201,161,90,0)}}
+.stage.lgfx,.after.lgfx{animation:lgBlur .85s ease both}
+.lgflash{position:fixed;inset:0;z-index:55;pointer-events:none;opacity:0;background:radial-gradient(70% 38% at 50% 6%,rgba(255,232,178,.95),rgba(255,232,178,.35) 45%,rgba(255,232,178,0) 75%),radial-gradient(90% 60% at 50% 50%,rgba(255,255,255,.35),rgba(255,255,255,0))}
+.lgflash.go{animation:lgFlash .85s ease both}
+.lang button.tap{animation:lgTap .42s cubic-bezier(.3,1.6,.5,1),lgRing .5s ease-out}
+@media (prefers-reduced-motion:reduce){.stage.lgfx,.after.lgfx,.lgflash.go,.lang button.tap{animation:none}}
+.pw .pph{display:flex;align-items:center;justify-content:center;gap:9px;direction:ltr}
+.pw .pph a{color:rgba(107,74,84,.8);text-decoration:none;font:500 12.5px 'Assistant','Noto Sans',sans-serif;letter-spacing:.06em;display:inline-flex;align-items:center}
+.pw .pph a.pi{padding:4px;margin:-4px}
+.pw .pph a.pi svg{display:block}
+.rsvp{margin-bottom:6vh}
+.rsvp .rsub{margin:20px auto 0;max-width:80vw;font:600 16px/1.5 'Assistant','Noto Sans',sans-serif;color:#6b4a54}
+.rsvp .rgo{width:min(90vw,380px);margin:22px auto 0;text-decoration:none}
+.cdate{display:flex;flex-direction:column;align-items:center;gap:8px;margin:0 auto 26px;text-align:center}
+.cdate .d1{font:700 clamp(17px,4.8vw,21px)/1.3 'Frank Ruhl Libre','Noto Serif',serif;color:var(--wine)}
+.cdate .d2{font:800 clamp(34px,10.5vw,46px)/1 'Assistant','Noto Sans',sans-serif;letter-spacing:.12em;padding-left:.12em;direction:ltr;background:linear-gradient(100deg,#6b1d33,#a67c3c 50%,#6b1d33);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cdate .d3{font:600 15px/1.4 'Assistant','Noto Sans',sans-serif;color:#7a5a64;letter-spacing:.03em}
+html[lang=uk] .cdate .d1{font-family:'Noto Serif Display','Noto Serif',serif}
+.mono svg{display:block;width:24cqw;height:auto;fill:#e6cc92;filter:drop-shadow(0 1px 1px rgba(0,0,0,.35))}
+.snd{position:fixed;top:calc(10px + env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px));z-index:60;width:42px;height:42px;border-radius:50%;border:0;display:grid;place-items:center;cursor:pointer;color:var(--wine);background:rgba(255,250,246,.82);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 6px 16px -6px rgba(74,18,36,.45),inset 0 1px 0 #fff;-webkit-tap-highlight-color:transparent;transition:transform .2s}
+.snd:active{transform:scale(.9)}
+@keyframes sndp{0%,100%{opacity:1}50%{opacity:.55}}
+.snd.ld svg{animation:sndp 1s ease-in-out infinite}
+.snd .off{display:block}.snd .on{display:none}
+.snd[aria-pressed=true] .off{display:none}.snd[aria-pressed=true] .on{display:block}
+.snd[aria-pressed=true]{color:#f6e7bd;background:linear-gradient(180deg,#9a3350,#6b1d33 60%,#4a1224);box-shadow:0 6px 12px -4px rgba(74,18,36,.7),inset 0 1px 0 rgba(255,255,255,.3),0 0 0 2px #c9a15a}
+.snd:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="mg" viewBox="0 0 100 41.68"><path d="M0.75 40.03Q0 40.03 0 39.49Q0 38.91 1.06 38.75L2.13 38.59Q3.3 38.43 3.75 38.03Q4.2 37.63 4.42 36.51L11.66 5.22Q11.87 4.32 11.71 3.84Q11.55 3.36 10.32 3.14L9.26 2.93Q8.57 2.77 8.57 2.35Q8.57 1.71 9.53 1.71H19.9Q24.32 1.71 26.66 4.1Q29 6.5 29 10.12Q29 13.47 27.28 16.32Q25.55 19.16 22.49 20.92Q19.43 22.68 15.33 22.68H12.19Q11.34 22.68 11.07 23.58L8.09 36.3Q7.82 37.47 8.22 37.9Q8.62 38.32 9.95 38.48L12.51 38.8Q12.99 38.85 12.99 39.33Q12.99 40.03 12.03 40.03ZM12.29 18.42Q11.97 19.8 12.59 20.57Q13.2 21.35 15.17 21.35Q17.83 21.35 19.72 20.23Q21.61 19.11 22.8 17.33Q24 15.54 24.56 13.5Q25.12 11.45 25.12 9.58Q25.12 6.66 23.58 4.85Q22.03 3.04 19.05 3.04Q15.81 3.04 15.33 5.17ZM47.79 40.5Q44.54 40.5 42.1 39.12Q39.65 37.74 38.29 35.29Q36.93 32.84 36.93 29.59Q36.93 26.45 38.19 23.74Q39.44 21.03 41.59 19.06Q43.75 17.09 46.46 16.24Q44.86 14.16 44.86 11.02Q44.86 8.25 46.11 6.02Q47.37 3.78 49.52 2.48Q51.68 1.18 54.34 1.18Q56.04 1.18 57.61 1.73Q59.18 2.29 60.19 3.25Q60.94 3.94 60.72 5.01L59.23 12.78Q59.07 13.58 58.49 13.58Q57.85 13.58 57.8 12.67L57.74 11.55Q57.53 7.14 56.52 5.3Q55.51 3.46 53.22 3.46Q51.3 3.46 49.79 4.47Q48.27 5.49 47.37 7.24Q46.46 9 46.46 11.23Q46.46 14.37 48.16 15.86Q48.96 15.76 49.76 15.76Q52.58 15.76 52.58 17.14Q52.58 18.42 50.56 18.42Q48.91 18.42 47.53 17.35Q40.77 19.43 40.77 28.42Q40.77 33.32 42.9 36.06Q45.02 38.8 48.75 38.8Q51.41 38.8 53.57 37.47Q55.72 36.14 57 33.93Q58.28 31.72 58.28 29.01Q58.28 24.86 54.34 24.86Q52.79 24.86 51.92 25.47Q51.04 26.08 51.04 26.99Q51.04 27.79 51.57 28.05Q52.1 28.32 52.79 28.48Q53.49 28.64 54.02 29.04Q54.55 29.43 54.55 30.5Q54.55 31.46 53.86 32.02Q53.17 32.57 52.05 32.57Q50.61 32.57 49.76 31.51Q48.91 30.45 48.91 28.69Q48.91 26.72 50.08 25.28Q51.25 23.85 53.25 23.21Q55.24 22.57 57.64 23L59.29 23.26Q62.75 23.79 62.75 22.41Q62.75 21.77 62.16 21.51Q61.58 21.24 60.83 21Q60.09 20.76 59.5 20.31Q58.91 19.86 58.91 18.9Q58.91 17.99 59.55 17.41Q60.19 16.82 61.36 16.82Q62.91 16.82 63.76 17.91Q64.61 19 64.61 20.81Q64.61 23.1 63.17 24.49Q61.73 25.87 59.5 25.71Q59.87 26.93 59.87 28.64Q59.87 32.04 58.3 34.73Q56.73 37.42 54.02 38.96Q51.3 40.5 47.79 40.5ZM71.74 40.03Q71 40.03 71 39.49Q71 38.91 72.06 38.75L73.12 38.59Q74.29 38.43 74.75 38.03Q75.2 37.63 75.41 36.51L82.65 5.22Q82.86 4.32 82.7 3.84Q82.54 3.36 81.32 3.14L80.26 2.93Q79.56 2.77 79.56 2.35Q79.56 1.71 80.52 1.71H90.9Q95.32 1.71 97.66 4.1Q100 6.5 100 10.12Q100 13.47 98.27 16.32Q96.54 19.16 93.48 20.92Q90.42 22.68 86.32 22.68H83.18Q82.33 22.68 82.06 23.58L79.08 36.3Q78.82 37.47 79.22 37.9Q79.62 38.32 80.95 38.48L83.5 38.8Q83.98 38.85 83.98 39.33Q83.98 40.03 83.02 40.03ZM83.29 18.42Q82.97 19.8 83.58 20.57Q84.19 21.35 86.16 21.35Q88.82 21.35 90.71 20.23Q92.6 19.11 93.8 17.33Q95 15.54 95.56 13.5Q96.11 11.45 96.11 9.58Q96.11 6.66 94.57 4.85Q93.03 3.04 90.05 3.04Q86.8 3.04 86.32 5.17Z"/></symbol><linearGradient id="gF" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6efe9"/><stop offset="1" stop-color="#dfcec8"/></linearGradient><linearGradient id="gB" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#b3848f"/><stop offset="1" stop-color="#cfa7b2"/></linearGradient></defs></svg>
+<div class="scroll" id="scroll"></div>
+<main class="stage" id="stage">
+  <canvas class="sparks" id="sp1"></canvas>
+  <div class="top" id="top"><div class="s" data-i="invto">הוזמנתם לשמחת החתונה של</div><div class="n" data-i="nm1">פלוני <em>&amp;</em> פלונית</div><div class="o"><i></i></div></div>
+  <div class="ring" id="ring"></div>
+  <div class="abs eb" id="eb"></div>
+  <div class="abs card" id="card">
+    <div class="pop" id="pop"><div class="flip" id="flip">
+      <section class="face front" aria-label="הזמנה לחתונה">
+        <div class="wine">
+          <div class="mono" role="img" aria-label="P&amp;P"><svg viewBox="0 0 100 41.68" style="aspect-ratio:100/41.68"><use href="#mg" width="100" height="41.68"/></svg></div>
+          <div class="names" data-i="nm2"><span>פלוני</span><em>&amp;</em><span>פלונית</span></div>
+          <div class="rule"></div>
+        </div>
+        <div class="info">
+          <div class="date" data-i="date">יום רביעי | ה׳ שבט התשפ״ח<small>02.02.28</small></div>
+          <div class="venue" data-i="venue">אולמי פלוני תל אביב</div>
+        </div>
+      
+</section>
+      <section class="face back" aria-label="פרטי האירוע">
+        <div class="in">
+          <div>
+            <h3 data-i="h_rec">קבלת פנים</h3>
+            <p data-i="p_rec">תתקיים בעזרת ה׳ באולמי פלוני תל אביב<br>בשעה <strong>17:30</strong></p>
+          </div>
+          <div class="band">
+            <h3 data-i="h_ch">החופה וסעודת החתונה</h3>
+            <p data-i="p_ch">יתקיימו בעזרת ה׳ ביום רביעי ה׳ שבט | 02.02<br>באולמי פלוני תל אביב<br><strong>חופה בשעה 18:30</strong></p>
+          </div>
+          <p data-i="alsowe" style="color:var(--wine);font-weight:600">נשמח לראותכם משתתפים בשמחת ילדינו</p>
+          <div class="fl2"><span></span></div>
+          <div class="par">
+            <div data-i="par1"><span>הורי החתן</span><b dir="rtl">משפחת<br>פלוני</b>תל אביב, ישראל</div>
+            <div data-i="par2"><span>הורי הכלה</span><b dir="rtl">משפחת<br>אלמוני</b>חיפה, ישראל</div>
+          </div>
+        </div>
+      </section>
+    </div></div>
+  </div>
+  <div class="abs tear" id="t1"></div><div class="abs tear" id="t2"></div>
+  <div class="abs ef fw" id="fw"><div class="fl"><div class="ff"></div><div class="fb"></div></div><button class="seal" id="seal" aria-label="לחצו כדי לפתוח את המעטפה"><svg viewBox="0 0 120 120"><defs>
+<radialGradient id="sg" cx=".35" cy=".28" r=".95"><stop offset="0" stop-color="#b5445f"/><stop offset=".45" stop-color="#7d2038"/><stop offset="1" stop-color="#3f0d1c"/></radialGradient>
+<radialGradient id="si" cx=".42" cy=".38" r=".8"><stop offset="0" stop-color="#8f2d47"/><stop offset="1" stop-color="#5a1429"/></radialGradient>
+<linearGradient id="st" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8e6b0"/><stop offset="1" stop-color="#c9a15a"/></linearGradient>
+<filter id="emb" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="-.7" dy="-.7" stdDeviation=".4" flood-color="#e58aa3" flood-opacity=".55"/><feDropShadow dx=".8" dy="1.1" stdDeviation=".6" flood-color="#1e0209" flood-opacity=".8"/></filter></defs>
+<circle cx="60" cy="60" r="55" fill="url(#sg)"/><circle cx="60" cy="60" r="55" fill="none" stroke="#d57b94" stroke-opacity=".45" stroke-width="1.2"/>
+<circle cx="60" cy="60" r="47" fill="url(#si)" filter="url(#emb)"/><circle cx="60" cy="60" r="41" fill="none" stroke="#e8c97f" stroke-opacity=".7" stroke-width="1"/>
+<circle cx="60" cy="60" r="51" fill="none" stroke="#e8c97f" stroke-opacity=".4" stroke-width=".8" stroke-dasharray="1.2 3.2" stroke-linecap="round"/>
+<use href="#mg" x="31.0" y="46.91" width="58" height="24.17" fill="url(#st)" filter="url(#emb)"/>
+<path d="M45 78Q60 85 75 78" fill="none" stroke="#e8c97f" stroke-opacity=".7" stroke-width="1" stroke-linecap="round"/>
+<ellipse cx="42" cy="26" rx="22" ry="8" fill="#fff" opacity=".2" transform="rotate(-32 42 26)"/></svg></button></div>
+  <div class="abs ef" id="ef"><div class="pk"><i class="l"></i><i class="r"></i><i class="b"></i></div></div>
+  <div class="hint" id="hint" aria-hidden="true"></div>
+</main>
+<div class="lb" id="lb" hidden><button class="lbx" id="lbx" aria-label="סגירה"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button><div class="lbs" id="lbs"><img id="lbi" alt="ההזמנה לחתונה של פלוני ופלונית"></div></div>
+<div class="mlb" id="mlb" hidden><button class="lbx" id="mlbx" aria-label="סגירה"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  <div class="mpanel"><div class="mp big" id="mpb"></div><div class="pinw"><div class="chip" data-i="chip">אולמי פלוני תל אביב</div><svg class="pin" viewBox="0 0 40 52" width="40" height="52"><defs><linearGradient id="pg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a03350"/><stop offset="1" stop-color="#4a1224"/></linearGradient></defs><path d="M20 50C20 50 4 33 4 19a16 16 0 0132 0c0 14-16 31-16 31z" fill="url(#pg2)" stroke="#f6e7bd" stroke-width="2"/><circle cx="20" cy="19" r="6.5" fill="#f6e7bd"/></svg></div><span class="osm">© OpenStreetMap</span></div>
+  <div class="mbtns"><div class="nav"><a class="nb nb-w" href="https://waze.com/ul?q=Tel%20Aviv&navigate=yes" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.7-6.5-11a6.5 6.5 0 0113 0c0 5.3-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg><span>Waze</span></a><a class="nb nb-g" href="https://www.google.com/maps/search/?api=1&query=Tel+Aviv" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3.5 6v14L9 18l6 2 5.5-2V4L15 6 9 4z"/><path d="M9 4v14M15 6v14"/><path d="M5.8 9.5l2 1.8M17 12.5l1.8-1.8M11 9l2 2.5" stroke-width="1.3"/></svg><span>Google Maps</span></a></div></div></div>
+<div class="sheet" id="sheet" hidden><div class="sh-bg" id="shbg"></div><div class="sh-box">
+  <div class="sh-t" data-i="addcal">הוספה ליומן</div>
+  <a class="nb nb-w" id="gcal" target="_blank" rel="noopener" href="#"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17M12 13.2l.9 1.8 2 .3-1.45 1.4.35 2-1.8-1-1.8 1 .35-2L9.1 15.3l2-.3z"/></svg><span>Google Calendar</span></a>
+  <a class="nb nb-g" id="ics" target="_blank" rel="noopener" href="#"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17M12 13.2l.9 1.8 2 .3-1.45 1.4.35 2-1.8-1-1.8 1 .35-2L9.1 15.3l2-.3z"/></svg><span>Outlook</span></a>
+</div></div>
+<section class="after" id="after"><canvas class="sparks" id="sp2"></canvas>
+  <h2 class="rv" data-i="h_inv">ההזמנה לחתונה</h2>
+  <div class="orn rv"><i></i></div>
+  <div class="inv rv" id="inv" role="button" tabindex="0" aria-label="פתיחת ההזמנה במסך מלא"><img alt="ההזמנה לחתונה של פלוני ופלונית" src="invitation.jpg"><span class="mag" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#6b1d33" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5M10.5 8v5M8 10.5h5"/></svg></span></div>
+
+  <div class="tl rv" id="tl">
+    <h2 class="rv" data-i="h_tl">סדר הערב</h2>
+    <div class="orn rv"><i></i></div>
+    <div class="tl-list" id="tll"><div class="tl-track" id="tlt"></div><div class="tl-fill" id="tlf"></div>
+      <div class="tl-it">
+        <div class="tl-tm">17:30</div>
+        <div class="tl-dot"><i></i></div>
+        <div class="tl-tx" data-i="tl1"><b>קבלת פנים</b><span>באולמי פלוני, תל אביב</span></div>
+      </div>
+      <div class="tl-it">
+        <div class="tl-tm">18:30</div>
+        <div class="tl-dot"><i></i></div>
+        <div class="tl-tx" data-i="tl2"><b>חופה וסעודה</b><span>באולמי פלוני, תל אביב</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="cd">
+    <div class="plate rv"><div class="plate-in">
+    <div class="ph"><h3 data-i="h_cd">עד החופה נשאר</h3><div class="orn"><i></i></div></div>
+    <div style="text-align:center"><div class="dw"><div class="u1"><div id="tD"></div><label data-i="u_d">ימים</label></div></div>
+    </div><div class="hms" id="hms" dir="ltr"></div></div></div>
+    
+    <div class="way">
+      <h2 class="rv" data-i="h_way">איך מגיעים</h2>
+      <div class="orn rv"><i></i></div>
+      <div class="mapcard rv" id="mapcard" role="button" tabindex="0" aria-label="פתיחת המפה">
+        <div class="mp" id="mp"></div><div class="pinw"><div class="chip" data-i="chip">אולמי פלוני תל אביב</div><svg class="pin" viewBox="0 0 40 52" width="40" height="52"><defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a03350"/><stop offset="1" stop-color="#4a1224"/></linearGradient></defs><path d="M20 50C20 50 4 33 4 19a16 16 0 0132 0c0 14-16 31-16 31z" fill="url(#pg)" stroke="#f6e7bd" stroke-width="2"/><circle cx="20" cy="19" r="6.5" fill="#f6e7bd"/></svg></div>
+        <span class="mag" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#6b1d33" stroke-width="2" stroke-linecap="round"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg></span>
+        <a class="gchip" href="https://www.google.com/maps/search/?api=1&query=Tel+Aviv" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v4.5A1.5 1.5 0 0116.5 20h-11A1.5 1.5 0 014 18.5v-11A1.5 1.5 0 015.5 6H10"/></svg><span data-i="gopen">פתיחה במפות Google</span></a>
+        <span class="osm">© OpenStreetMap</span>
+      </div>
+      <div class="rv"><div class="nav"><a class="nb nb-w" href="https://waze.com/ul?q=Tel%20Aviv&navigate=yes" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.7-6.5-11a6.5 6.5 0 0113 0c0 5.3-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg><span>Waze</span></a><a class="nb nb-g" href="https://www.google.com/maps/search/?api=1&query=Tel+Aviv" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3.5 6v14L9 18l6 2 5.5-2V4L15 6 9 4z"/><path d="M9 4v14M15 6v14"/><path d="M5.8 9.5l2 1.8M17 12.5l1.8-1.8M11 9l2 2.5" stroke-width="1.3"/></svg><span>Google Maps</span></a></div></div>
+      <div class="vn rv"><button class="cp" id="cpb" type="button"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5 15V6.5A2.5 2.5 0 017.5 4H15"/></svg><span data-i="cp">העתקת הכתובת</span></button></div>
+      <div class="rv calw"><div class="cdate" data-i="cdate"><span class="d1">יום רביעי · ה׳ בשבט התשפ״ח</span><span class="d2">02.02.2028</span><span class="d3">חופה בשעה 18:30</span></div><button class="nb nb-c" id="calbtn" type="button"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17M12 13.2l.9 1.8 2 .3-1.45 1.4.35 2-1.8-1-1.8 1 .35-2L9.1 15.3l2-.3z"/></svg><span data-i="addcal2">הוסף ליומן</span></button></div>
+    </div>
+    <div class="rsvp rv" id="rsvp">
+      <h2 data-i="r_h">אישור הגעה</h2><div class="orn"><i></i></div>
+      <p class="rsub" data-i="r_sub">נשמח לדעת אם תגיעו לשמחה</p>
+      <a class="nb nb-w rgo" id="rgo" href="https://www.google.com/forms/about/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span data-i="r_go">לאישור הגעה</span></a>
+    </div>
+    <p class="done" id="done" data-i="done">מזל טוב! החופה מתחילה</p>
+  </div>
+  <div class="fin" id="fin"><canvas class="fwk" id="fwc"></canvas>
+    <div class="mz" id="mz" aria-label="מזל טוב"></div>
+    <div class="pw"><span>powered by</span><b>A. Adam</b><div class="pph"><a class="pi" href="tel:+972504523213" aria-label="Call"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></a><a class="pn" href="tel:+972504523213">0504523213</a><a class="pi" href="https://wa.me/972504523213" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 004.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15a8.2 8.2 0 01-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 01-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23s8.23 3.69 8.23 8.23-3.7 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.07-.11-.23-.17-.48-.29z"/></svg></a></div></div>
+  </div>
+</section>
+<script>
+(function(){
+  function mk(host,cls){
+    var t=document.createElement('div');t.className='tile '+cls;
+    t.innerHTML='<div class="h u"><span>00</span></div><div class="h d"><span>00</span></div><div class="h fu"><span>00</span></div><div class="h fd"><span>00</span></div>';
+    host.appendChild(t);t._v='00';return t;
+  }
+  function set(t,v){
+    if(t._v===v)return;
+    var q=function(c){return t.querySelector('.'+c+' span')};
+    q('u').textContent=v;q('fu').textContent=t._v;q('fd').textContent=v;q('d').textContent=t._v;
+    t.classList.remove('flipping');void t.offsetWidth;t.classList.add('flipping');
+    var old=t._v;t._v=v;
+    setTimeout(function(){q('d').textContent=v;q('fu').textContent=v;t.classList.remove('flipping')},680);
+  }
+  var tD=mk(document.getElementById('tD'),'big'),hms=document.getElementById('hms'),T=[];
+  [['שעות','','u_h'],['דקות','','u_m'],['שניות','sec','u_s']].forEach(function(x){
+    var w=document.createElement('div');w.className='u1';var h=document.createElement('div');w.appendChild(h);
+    var l=document.createElement('label');l.textContent=x[0];l.setAttribute('data-i',x[2]);w.appendChild(l);hms.appendChild(w);T.push(mk(h,x[1]));
+  });
+  var target=new Date('2028-02-02T18:30:00+02:00').getTime();
+  var p2=function(n){return String(n).padStart(2,'0')};
+  function upd(){
+    var d=Math.max(0,target-Date.now());
+    set(tD,p2(Math.floor(d/864e5)));
+    set(T[0],p2(Math.floor(d%864e5/36e5)));
+    set(T[1],p2(Math.floor(d%36e5/6e4)));
+    set(T[2],p2(Math.floor(d%6e4/1e3)));
+    if(d===0)document.getElementById('done').style.display='block';
+  }
+  upd();setInterval(upd,250);
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.2});
+  document.querySelectorAll('.rv').forEach(function(n){io.observe(n)});
+  var inv=document.getElementById('inv'),im=inv.firstElementChild;
+  if(matchMedia('(hover:hover)').matches){
+    inv.addEventListener('pointermove',function(e){var r=inv.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;im.style.transform='rotateY('+x*9+'deg) rotateX('+(-y*9)+'deg)'});
+    inv.addEventListener('pointerleave',function(){im.style.transform=''});
+  }
+  /* seal click: tear the envelope open */
+  var busy=false;
+  seal.addEventListener('click',function(){
+    if(scrollY>20||busy)return;busy=true;
+    var stage=document.getElementById('stage'),vh=innerHeight,D=vh*.03,t1=document.getElementById('t1'),t2=document.getElementById('t2');
+    var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+    seal.animate([{transform:'scale(1)'},{transform:'scale(1.25) rotate(-6deg)',offset:.4},{transform:'scale(.2) rotate(18deg)',opacity:0}],{duration:rm?1:380,easing:'ease-in',fill:'forwards'}).onfinish=function(){
+      stage.classList.add('tearing');window.__setP(.2);
+      [t1,t2].forEach(function(t){t.style.transform='translateY('+D+'px)'});
+      t1.animate([{transform:'translateY('+D+'px)',opacity:1},{transform:'translate(-14%,'+(D-vh*.22)+'px) rotate(-13deg)',opacity:0}],{duration:1300,easing:'cubic-bezier(.5,0,.9,.4)',fill:'forwards'});
+      t2.animate([{transform:'translateY('+D+'px)',opacity:1},{transform:'translate(12%,'+(D+vh*.3)+'px) rotate(9deg)',opacity:0}],{duration:1300,easing:'cubic-bezier(.5,0,.9,.4)',fill:'forwards'});
+      var t0=performance.now(),dur=rm?1:2300;
+      (function step(t){var k=Math.min(1,(t-t0)/dur);window.__setP(.2+.64*k);
+        if(k<1)requestAnimationFrame(step);
+        else{var m=vh*2.4;window.__setP(null);stage.classList.remove('tearing');seal.getAnimations().forEach(function(a){a.cancel()});scrollTo(0,m*.84);busy=false;window.__setP(null)}
+      })(t0);
+    };
+  });
+  addEventListener('scroll',function(){seal.style.pointerEvents=scrollY>30?'none':'auto'},{passive:true});
+})();
+</script>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  var stage=$('stage'),eb=$('eb'),ef=$('ef'),card=$('card'),pop=$('pop'),flip=$('flip'),hint=$('hint'),ring=$('ring');
+  var seal=document.getElementById('seal');
+    var fw=$('fw'),flA=fw.querySelector('.fl'),flB=flA;
+  
+  function clipFlap(){
+    var W=fw.offsetWidth,H=flA.offsetHeight,r=24,k=34,dx=W/2-W,dy=H-r,L=Math.hypot(dx,dy),ux=dx/L,uy=dy/L;
+    var ax=W/2-ux*k,ay=H-uy*k,d='path("M0 '+r+'Q0 0 '+r+' 0H'+(W-r)+'Q'+W+' 0 '+W+' '+r+'L'+ax+' '+ay+'Q'+W/2+' '+H+' '+(W-ax)+' '+ay+'Z")';
+    [flA,flB].forEach(function(f){f.querySelectorAll('.ff,.fb').forEach(function(n){n.style.clipPath=d;n.style.webkitClipPath=d})});
+  }
+  clipFlap();addEventListener('resize',clipFlap);
+  var clamp=function(x){return Math.max(0,Math.min(1,x))};
+  var ease=function(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2};
+  var popped=false,tick=false,override=null;
+
+  function burst(){
+    ring.classList.remove('go');void ring.offsetWidth;ring.classList.add('go');
+    for(var i=0;i<14;i++){
+      var s=document.createElement('i');s.className='sp';
+      var a=Math.PI*2*i/14,d=card.offsetWidth*(.55+Math.random()*.25);
+      s.style.setProperty('--x',Math.cos(a)*d+'px');s.style.setProperty('--y',Math.sin(a)*d*1.1+'px');
+      stage.appendChild(s);setTimeout(function(n){n.remove()},1050,s);
+    }
+  }
+
+  function render(){
+    tick=false;
+    var vh=innerHeight,cw=card.offsetWidth;
+    var max=vh*2.4;
+    var p=override!==null?override:clamp(scrollY/max);
+    var e1=ease(clamp((p-.04)/.18)),e2=ease(clamp((p-.22)/.34)),e3=ease(clamp((p-.58)/.2)),f=ease(clamp((p-.88)/.12));
+    var D=vh*.03;
+
+    var rot='perspective(1100px) rotateX('+(-180*e1)+'deg)';
+    flA.style.transform=rot;fw.style.zIndex=e1<.5?4:1;
+    seal.style.opacity=1-clamp(e1*4);
+    seal.style.transform='translateY('+(e1*14)+'px) scale('+(1+e1*.25)+') rotate('+(e1*-12)+'deg)';
+
+    stage.style.setProperty('--et',(D+e3*vh*.75)+'px');
+    stage.style.setProperty('--es',1-.12*e3);
+    stage.style.setProperty('--eo',e3>.98?0:1-e3*e3);
+    stage.style.setProperty('--cs',(14+e3*22+e2*6)+'px');
+
+    var y=(D-.85*cw*e2)*(1-e3);
+    var sc=.5+.1*e2+.4*e3;
+    card.style.transform='translateY('+y+'px) scale('+sc+')';
+    card.style.zIndex=e2>.98?5:2;
+    flip.style.transform='rotateY('+(f*180)+'deg)';
+    hint.style.opacity=1-clamp(p*14);document.getElementById('top').style.opacity=1-clamp((p-.1)*6);
+
+    if(e3>=.999&&!popped){popped=true;pop.classList.remove('blop');void pop.offsetWidth;pop.classList.add('blop');burst()}
+    if(e3<.9)popped=false;
+  }
+  function req(){if(!tick){tick=true;requestAnimationFrame(render)}}
+  addEventListener('scroll',req,{passive:true});addEventListener('resize',req);
+  window.__setP=function(v){override=v;render()};
+  render();
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(render);
+})();
+</script>
+<script>
+(function(){
+  var rm=matchMedia('(prefers-reduced-motion:reduce)').matches,items=[];
+  function mk(id,per){
+    var c=document.getElementById(id),x=c.getContext('2d'),W=0,H=0,P=[],vis=true;
+    function size(){var r=c.parentNode.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);W=r.width;H=r.height;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);
+      var n=Math.round(W*H/per);P=[];for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:.9+Math.random()*2.1,ph:Math.random()*6.28,sp:.4+Math.random()*1.1,vy:-(.02+Math.random()*.05),g:Math.random()<.7,st:Math.random()<.3})}
+    function star(px,py,r,a){x.globalAlpha=a;x.beginPath();var l=r*3.2;x.moveTo(px,py-l);x.quadraticCurveTo(px,py,px+l,py);x.quadraticCurveTo(px,py,px,py+l);x.quadraticCurveTo(px,py,px-l,py);x.quadraticCurveTo(px,py,px,py-l);x.fill()}
+    function draw(t){x.clearRect(0,0,W,H);
+      for(var i=0;i<P.length;i++){var p=P[i],a=rm?.55:.15+.85*Math.pow(.5+.5*Math.sin(t*.001*p.sp+p.ph),3);
+        if(!rm){p.y+=p.vy;if(p.y<-8)p.y=H+8}
+        x.fillStyle=p.g?'#d9b36a':'#ffffff';
+        if(p.st)star(p.x,p.y,p.r,a);else{x.globalAlpha=a*.85;x.beginPath();x.arc(p.x,p.y,p.r*.8,0,6.28);x.fill()}}
+      x.globalAlpha=1}
+    size();addEventListener('resize',size);
+    if('IntersectionObserver'in window)new IntersectionObserver(function(e){vis=e[0].isIntersecting}).observe(c);
+    (function loop(t){if(vis)draw(t||0);if(!rm)requestAnimationFrame(loop)})();
+    if(rm)draw(0);
+  }
+  mk('sp1',5500);mk('sp2',7000);
+})();
+</script>
+<script>
+(function(){
+  var inv=document.getElementById('inv'),lb=document.getElementById('lb'),lbs=document.getElementById('lbs'),lbi=document.getElementById('lbi'),x=document.getElementById('lbx');
+  function open(){lbi.src=inv.querySelector('img').src;lbs.classList.remove('zoom');lb.hidden=false;void lb.offsetWidth;lb.classList.add('on');document.documentElement.style.overflow='hidden';x.focus()}
+  function close(){lb.classList.remove('on');document.documentElement.style.overflow='';setTimeout(function(){lb.hidden=true},300);inv.focus({preventScroll:true})}
+  inv.addEventListener('click',open);
+  inv.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}});
+  x.addEventListener('click',close);
+  lbs.addEventListener('click',function(e){
+    if(e.target===lbi){var z=lbs.classList.toggle('zoom');if(z){lbs.scrollLeft=(lbs.scrollWidth-lbs.clientWidth)/2;lbs.scrollTop=0}}else close()
+  });
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)close()});
+})();
+</script>
+<script>
+(function(){
+  var LAT=31.9036504,LNG=34.7899417,$=function(i){return document.getElementById(i)};
+  function wp(z){var n=Math.pow(2,z),r=LAT*Math.PI/180;return{x:(LNG+180)/360*n*256,y:(1-Math.log(Math.tan(r)+1/Math.cos(r))/Math.PI)/2*n*256}}
+  function build(el,z){
+    var w=el.clientWidth,h=el.clientHeight;if(!w)return;el.querySelectorAll('img').forEach(function(n){n.remove()});
+    var c=wp(z),L=c.x-w/2,T=c.y-h/2,n=Math.pow(2,z);
+    for(var tx=Math.floor(L/256);tx<=Math.floor((L+w)/256);tx++)for(var ty=Math.floor(T/256);ty<=Math.floor((T+h)/256);ty++){
+      if(ty<0||ty>=n)continue;var im=new Image();im.alt='';im.draggable=false;im.referrerPolicy='origin';
+      im.style.left=(tx*256-L)+'px';im.style.top=(ty*256-T)+'px';im.onerror=function(){this.remove()};
+      im.src='https://tile.openstreetmap.org/'+z+'/'+(((tx%n)+n)%n)+'/'+ty+'.png';el.appendChild(im)}
+  }
+  var mp=$('mp'),mpb=$('mpb'),mlb=$('mlb'),card=$('mapcard');
+  build(mp,15);addEventListener('resize',function(){build(mp,15);if(!mlb.hidden)build(mpb,16)});
+  function oMap(){window.open('https://www.google.com/maps/search/?api=1&query=Tel+Aviv','_blank','noopener');return;mlb.hidden=false;void mlb.offsetWidth;mlb.classList.add('on');document.documentElement.style.overflow='hidden';build(mpb,16);$('mlbx').focus()}
+  function cMap(){mlb.classList.remove('on');document.documentElement.style.overflow='';setTimeout(function(){mlb.hidden=true},300);card.focus({preventScroll:true})}
+  card.addEventListener('click',oMap);card.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();oMap()}});
+  $('mlbx').addEventListener('click',cMap);mlb.addEventListener('click',function(e){if(e.target===mlb)cMap()});
+  /* calendar */
+  var sheet=$('sheet'),mapUrl='https://www.google.com/maps/search/?api=1&query=Tel+Aviv';
+  var st='20280202T163000Z',en='20280202T213000Z';
+  window.__setCal=function(title,loc,desc){desc=desc+mapUrl;
+  $('gcal').href='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(title)+'&dates='+st+'/'+en+'&details='+encodeURIComponent(desc.replace(/\\n/g,'\n'))+'&location='+encodeURIComponent(loc);
+  $('ics').href='https://outlook.live.com/calendar/0/deeplink/compose?path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&subject='+encodeURIComponent(title)+'&startdt=2028-02-02T16%3A30%3A00Z&enddt=2028-02-02T21%3A30%3A00Z&location='+encodeURIComponent(loc)+'&body='+encodeURIComponent(desc.replace(/\\n/g,'\n'));};
+  window.__setCal('חתונת פלוני & פלונית','אולמי פלוני תל אביב, רחוב הדוגמה 1, תל אביב','החופה בשעה 18:30 (קבלת פנים 17:30)\nהגעה: ');
+  function oS(){sheet.hidden=false}function cS(){sheet.hidden=true}
+  $('calbtn').addEventListener('click',oS);$('shbg').addEventListener('click',cS);
+  sheet.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setTimeout(cS,300)})});
+  addEventListener('keydown',function(e){if(e.key==='Escape'){if(!mlb.hidden)cMap();if(!sheet.hidden)cS()}});
+  /* mazal tov + fireworks */
+  var mz=$('mz');
+  window.__buildMz=function(txt){var k=0;mz.innerHTML='';txt.split('').forEach(function(ch){var sp=document.createElement('span');if(ch===' '){sp.className='wsp'}else{sp.textContent=ch;sp.style.setProperty('--i',k++)}mz.appendChild(sp)})};
+  window.__buildMz('מזל טוב!');
+  var cv=$('fwc'),cx=cv.getContext('2d'),P=[],R=[],run=false,rm=matchMedia('(prefers-reduced-motion:reduce)').matches,T0=0,FL=[];
+  var COL=['#d9a03a','#c9892f','#b8456a','#e0607e','#8a2a45','#f0b84a','#a63a5a'];
+  function sz(){var r=cv.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);cv.width=r.width*d;cv.height=r.height*d;cx.setTransform(d,0,0,d,0,0);return r}
+  function boom(x,y){
+    var c=COL[Math.random()*COL.length|0],c2=COL[Math.random()*COL.length|0],t=Math.random(),n,i,a,v;
+    FL.push({x:x,y:y,l:1,c:c});
+    if(t<.34){n=70;for(i=0;i<n;i++){a=Math.PI*2*i/n;v=1.2+Math.random()*3.6;P.push({x:x,y:y,px:x,py:y,vx:Math.cos(a)*v,vy:Math.sin(a)*v,l:1,d:.011,g:.04,c:i%3?c:c2,s:1.6})}}
+    else if(t<.67){n=48;for(i=0;i<n;i++){a=Math.PI*2*i/n;v=3.6;P.push({x:x,y:y,px:x,py:y,vx:Math.cos(a)*v,vy:Math.sin(a)*v*.55,l:1,d:.014,g:.03,c:c,s:1.8})}
+      for(i=0;i<22;i++){a=Math.random()*6.28;v=Math.random()*1.6;P.push({x:x,y:y,px:x,py:y,vx:Math.cos(a)*v,vy:Math.sin(a)*v,l:1,d:.02,g:.03,c:'#f0b84a',s:1.5})}}
+    else{n=60;for(i=0;i<n;i++){a=Math.PI*2*i/n+Math.random()*.1;v=1+Math.random()*3.2;P.push({x:x,y:y,px:x,py:y,vx:Math.cos(a)*v,vy:Math.sin(a)*v-.6,l:1.4,d:.008,g:.075,c:'#c9892f',s:1.7,w:1})}}
+  }
+  function launch(r,delay){setTimeout(function(){R.push({x:r.width*(.1+Math.random()*.8),y:r.height,ty:r.height*(.12+Math.random()*.38),vy:-9-Math.random()*2.5})},delay)}
+  function fire(){
+    if(rm||run)return;var r=sz();run=true;T0=performance.now();
+    var k=0;[0,350,650,1000,1250,1600,1900,2300,2650,3000,3350].forEach(function(d){launch(r,d+Math.random()*80);if(k++%3==2)launch(r,d+140)});
+    (function loop(){
+      var r=cv.getBoundingClientRect();cx.globalCompositeOperation='source-over';cx.clearRect(0,0,r.width,r.height);cx.globalCompositeOperation='source-over';
+      FL=FL.filter(function(f){f.l-=.06;if(f.l<=0)return false;var g=cx.createRadialGradient(f.x,f.y,0,f.x,f.y,90);g.addColorStop(0,'rgba(240,184,74,'+(f.l*.45)+')');g.addColorStop(1,'rgba(240,184,74,0)');cx.fillStyle=g;cx.globalAlpha=1;cx.fillRect(f.x-90,f.y-90,180,180);return true});
+      R=R.filter(function(o){o.y+=o.vy;o.vy*=.986;o.x+=Math.sin(o.y*.05)*.3;
+        P.push({x:o.x,y:o.y,px:o.x,py:o.y+3,vx:(Math.random()-.5)*.5,vy:Math.random()*.6,l:.6,d:.05,g:0,c:'#d9a03a',s:1.3});
+        cx.globalAlpha=1;cx.fillStyle='#8a5a14';cx.beginPath();cx.arc(o.x,o.y,2.2,0,6.28);cx.fill();
+        if(o.y<=o.ty||o.vy>-1.2){boom(o.x,o.y);return false}return true});
+      P=P.filter(function(p){p.px=p.x;p.py=p.y;p.x+=p.vx;p.y+=p.vy;p.vy+=p.g;p.vx*=.985;p.l-=p.d;if(p.l<=0)return false;
+        var al=Math.max(0,Math.min(1,p.l));cx.globalAlpha=al;cx.strokeStyle=p.c;cx.fillStyle=p.c;cx.lineWidth=p.s*1.15*(p.w?1:Math.max(.5,al));cx.lineCap='round';
+        cx.beginPath();cx.moveTo(p.px,p.py);cx.lineTo(p.x,p.y);cx.stroke();cx.beginPath();cx.arc(p.x,p.y,p.s*.7*Math.max(.5,al),0,6.28);cx.fill();return true});
+      if(R.length||P.length||FL.length||performance.now()<T0+3900)requestAnimationFrame(loop);else{run=false;cx.clearRect(0,0,r.width,r.height)}
+    })();
+  }
+  new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){mz.classList.add('show');fire()}else{mz.classList.remove('show')}
+  })},{threshold:.9}).observe(mz);
+})();
+</script>
+<script>
+(function(){
+  var list=document.getElementById('tll'),fill=document.getElementById('tlf'),its=[].slice.call(list.querySelectorAll('.tl-it')),tk=false;
+  var trk=document.getElementById('tlt');
+  function upd(){tk=false;var line=innerHeight*.6,lr=list.getBoundingClientRect(),cs=[];
+    its.forEach(function(it){var d=it.querySelector('.tl-dot').getBoundingClientRect(),c=d.top+d.height/2;cs.push(c);if(c<line)it.classList.add('on');else it.classList.remove('on')});
+    var y0=cs[0]-lr.top,tot=cs[cs.length-1]-cs[0];
+    trk.style.top=y0+'px';trk.style.height=tot+'px';fill.style.top=y0+'px';
+    fill.style.height=Math.max(0,Math.min(tot,line-cs[0]))+'px'}
+  function rq(){if(!tk){tk=true;requestAnimationFrame(upd)}}
+  addEventListener('scroll',rq,{passive:true});addEventListener('resize',rq);upd();
+})();
+</script>
+<script>
+(function(){
+  var card=document.getElementById('mapcard'),ifr=document.createElement('iframe');
+  document.addEventListener('securitypolicyviolation',function(e){if(/frame/.test(e.violatedDirective||'')){ifr.remove();card.classList.remove('live')}});
+  ifr.className='gm';ifr.title='מפה';ifr.referrerPolicy='no-referrer-when-downgrade';ifr.allowFullscreen=true;
+  ifr.onload=function(){card.classList.add('live')};
+  ifr.src='https://www.google.com/maps?q='+encodeURIComponent('Tel Aviv, Israel')+'&ll=32.0853,34.7818&z=14&output=embed&hl=iw';
+  card.appendChild(ifr);
+  var b=document.getElementById('cpb'),addr='אולמי פלוני, רחוב הדוגמה 1, תל אביב',t;
+  b.addEventListener('click',function(){
+    function done(){var sp=b.querySelector('span');sp.textContent=window.__msg('cpok');b.classList.add('ok');clearTimeout(t);t=setTimeout(function(){sp.textContent=window.__msg('cp');b.classList.remove('ok')},2200)}
+    function fb(){var a=document.createElement('textarea');a.value=window.__msg('addr');a.style.cssText='position:fixed;opacity:0';document.body.appendChild(a);a.select();try{document.execCommand('copy');done()}catch(e){}a.remove()}
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(window.__msg('addr')).then(done,fb);else fb();
+  });
+})();
+</script>
+<audio id="bgm" loop preload="none"><source src="music.mp3" type="audio/mpeg"></audio>
+<button class="snd" id="snd" type="button" aria-label="Music" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z" fill="currentColor" stroke="none"/><g class="on"><path d="M15.5 9a4 4 0 010 6"/><path d="M18 6.5a7.5 7.5 0 010 11"/></g><path class="off" d="M16 9.5l5 5M21 9.5l-5 5"/></svg></button>
+<div class="lgflash" id="lgf"></div>
+<div class="lang" id="lang" role="group" aria-label="Language"><button type="button" data-l="he" aria-pressed="true"><span>עב</span></button><button type="button" data-l="en" aria-pressed="false"><span>EN</span></button><button type="button" data-l="uk" aria-pressed="false"><span>УКР</span></button></div>
+<script>
+(function(){
+  var RSVP_KEY='';  /* Web3Forms access key: filling it in turns the RSVP form on */
+  var T={
+  en:{
+    invto:'You are invited to the wedding of',
+    nm1:'Ploni <em>&amp;</em> Plonit',nm2:'<span>Ploni</span><em>&amp;</em><span>Plonit</span>',
+    date:'Wednesday | 5 Shevat 5788<small>02.02.28</small>',venue:'Ploni Hall, Tel Aviv',
+    h_rec:'Reception',p_rec:'Will take place, God willing, at Ploni Hall, Tel Aviv<br>at <strong>17:30</strong>',
+    h_ch:'Chuppah &amp; Wedding Meal',p_ch:'Will take place, God willing, on Wednesday, 5 Shevat | 02.02<br>at Ploni Hall, Tel Aviv<br><strong>Chuppah at 18:30</strong>',
+    alsowe:'We would be delighted to have you join the joy of our children',
+    par1:'<span>Groom\u2019s parents</span><b>The Ploni<br>Family</b>Tel Aviv, Israel',
+    par2:'<span>Bride\u2019s parents</span><b>The Almoni<br>Family</b>Haifa, Israel',
+    chip:'Ploni Hall, Tel Aviv',addcal:'Add to calendar',addcal2:'Add to calendar',
+    h_inv:'The Wedding Invitation',h_tl:'Schedule',
+    tl1:'<b>Reception</b><span>Ploni Hall, Tel Aviv</span>',tl2:'<b>Chuppah &amp; Dinner</b><span>Ploni Hall, Tel Aviv</span>',
+    h_cd:'Until the Chuppah',u_d:'Days',u_h:'Hours',u_m:'Minutes',u_s:'Seconds',
+    h_way:'Getting there',gopen:'Open in Google Maps',
+    done:'Mazel Tov! The chuppah is starting',cdate:'<span class="d1">Wednesday · 5 Shevat 5788</span><span class="d2">02.02.2028</span><span class="d3">Chuppah at 18:30</span>',mz:'Mazel Tov!',tag:'We would be delighted to see you at the joy of our grandchildren',
+    cp:'Copy address',cpok:'Address copied',addr:'Ploni Hall, Example St 1, Tel Aviv',r_h:'Will you join us?',r_sub:'We would love to know if you are coming',r_go:'Confirm attendance',r_n:'Full name',r_g:'Number of guests',r_p:'Phone (optional)',r_b:'We will be there',
+    r_need:'Please enter your name',r_ok:'Thank you! We got your reply.',r_err:'Could not send. Please try again.',
+    title:'Ploni & Plonit · Wedding Invitation',
+    cal:['Wedding of Ploni & Plonit','Ploni Hall, Example St 1, Tel Aviv','Chuppah at 18:30 (reception 17:30)\nDirections: ']
+  },
+  uk:{
+    invto:'Ви запрошені на весілля',
+    nm1:'Плоні <em>&amp;</em> Плоніт',nm2:'<span>Плоні</span><em>&amp;</em><span>Плоніт</span>',
+    date:'Середа | 5 шевата 5788<small>02.02.28</small>',venue:'Зал «Плоні», Тель-Авів',
+    h_rec:'Зустріч гостей',p_rec:'Відбудеться, за Божою волею, у залі «Плоні», Тель-Авів<br>о <strong>17:30</strong>',
+    h_ch:'Хупа та весільна вечеря',p_ch:'Відбудуться, за Божою волею, у середу, 5 шевата | 02.02<br>у залі «Плоні», Тель-Авів<br><strong>Хупа о 18:30</strong>',
+    alsowe:'Будемо раді бачити вас на святі наших дітей',
+    par1:'<span>Батьки нареченого</span><b>Родина<br>Плоні</b>Тель-Авів, Ізраїль',
+    par2:'<span>Батьки нареченої</span><b>Родина<br>Алмоні</b>Хайфа, Ізраїль',
+    chip:'Зал «Плоні», Тель-Авів',addcal:'Додати до календаря',addcal2:'Додати до календаря',
+    h_inv:'Запрошення на весілля',h_tl:'Програма вечора',
+    tl1:'<b>Зустріч гостей</b><span>Зал «Плоні», Тель-Авів</span>',tl2:'<b>Хупа та вечеря</b><span>Зал «Плоні», Тель-Авів</span>',
+    h_cd:'До хупи залишилось',u_d:'Дні',u_h:'Години',u_m:'Хвилини',u_s:'Секунди',
+    h_way:'Як дістатися',gopen:'Відкрити в Google Maps',
+    done:'Мазл тов! Хупа починається',cdate:'<span class="d1">Середа · 5 шевата 5788</span><span class="d2">02.02.2028</span><span class="d3">Хупа о 18:30</span>',mz:'Мазл тов!',tag:'Будемо раді бачити вас на святі наших онуків',
+    cp:'Скопіювати адресу',cpok:'Адресу скопійовано',addr:'Зал «Плоні», вул. Прикладна 1, Тель-Авів',r_h:'Підтвердження приходу',r_sub:'Будемо раді знати, чи ви прийдете',r_go:'Підтвердити прихід',r_n:'Повне ім\u2019я',r_g:'Кількість гостей',r_p:'Телефон (необов\u2019язково)',r_b:'Ми прийдемо',
+    r_need:'Будь ласка, введіть ім\u2019я',r_ok:'Дякуємо! Ми отримали вашу відповідь.',r_err:'Не вдалося надіслати. Спробуйте ще раз.',
+    title:'Плоні і Плоніт · Запрошення на весілля',
+    cal:['Весілля Плоні і Плоніт','Зал «Плоні», вул. Прикладна 1, Тель-Авів','Хупа о 18:30 (зустріч гостей о 17:30)\nЯк дістатися: ']
+  }};
+  var HE={cp:'העתקת הכתובת',cpok:'הכתובת הועתקה',addr:'אולמי פלוני, רחוב הדוגמה 1, תל אביב',mz:'מזל טוב!',title:'פלוני ופלונית · הזמנה לחתונה',r_ok:'תודה! קיבלנו את תשובתכם.',r_err:'השליחה נכשלה. נסו שוב.',r_need:'נא להזין שם',
+    cal:['חתונת פלוני & פלונית','אולמי פלוני תל אביב, רחוב הדוגמה 1, תל אביב','החופה בשעה 18:30 (קבלת פנים 17:30)\nהגעה: ']};
+  var els=[].slice.call(document.querySelectorAll('[data-i]'));
+  els.forEach(function(e){e.__he=e.innerHTML});
+  var cur='he';
+  function tx(k){return cur==='he'?(HE[k]||''):T[cur][k]}
+  window.__msg=tx;window.__msg0=tx;
+  function set(l){
+    cur=l;var h=document.documentElement;h.lang=l;h.dir=l==='he'?'rtl':'ltr';
+    els.forEach(function(e){var k=e.getAttribute('data-i');e.innerHTML=l==='he'?e.__he:T[l][k]});
+    window.__buildMz(l==='he'?HE.mz:T[l].mz);
+    document.title=tx('title');
+    var c=tx('cal');window.__setCal(c[0],c[1],c[2]);
+    [].forEach.call(document.querySelectorAll('#lang button'),function(b){b.setAttribute('aria-pressed',b.getAttribute('data-l')===l?'true':'false')});
+    try{localStorage.setItem('lang',l)}catch(e){}
+    window.dispatchEvent(new Event('resize'));
+  }
+  [].forEach.call(document.querySelectorAll('#lang button'),function(b){b.addEventListener('click',function(){var l=b.getAttribute('data-l');if(l===cur)return;
+    b.classList.remove('tap');void b.offsetWidth;b.classList.add('tap');
+    if(matchMedia('(prefers-reduced-motion:reduce)').matches){set(l);return}
+    var f=document.getElementById('lgf'),a=[document.getElementById('stage'),document.getElementById('after')];
+    f.classList.remove('go');a.forEach(function(x){x.classList.remove('lgfx')});void f.offsetWidth;
+    f.classList.add('go');a.forEach(function(x){x.classList.add('lgfx')});
+    setTimeout(function(){set(l)},320);
+    setTimeout(function(){f.classList.remove('go');a.forEach(function(x){x.classList.remove('lgfx')})},900)})});
+  var q=(location.search.match(/[?&]lang=(he|en|uk)/)||[])[1],st=null;
+  try{st=localStorage.getItem('lang')}catch(e){}
+  var init=q||st||'he';if(init!=='he')set(init);
+  })();
+</script>
+<script>
+(function(){
+  var a=document.getElementById('bgm'),b=document.getElementById('snd'),VOL=.4,want=true,fade=null,started=false;
+  try{if(localStorage.getItem('music')==='off')want=false}catch(e){}
+  function ui(on){b.setAttribute('aria-pressed',on?'true':'false')}
+  function fadeTo(v,ms,done){clearInterval(fade);var s0=a.volume,t0=Date.now();fade=setInterval(function(){var k=Math.min(1,(Date.now()-t0)/ms);a.volume=Math.max(0,Math.min(1,s0+(v-s0)*k));if(k>=1){clearInterval(fade);done&&done()}},50)}
+  function play(){
+    a.volume=0;ui(true);b.classList.add('ld');
+    var pr=a.play();
+    if(pr&&pr.then)pr.then(function(){started=true;b.classList.remove('ld');fadeTo(VOL,2500)}).catch(function(){b.classList.remove('ld');ui(false)});
+  }
+  function stop(){fadeTo(0,500,function(){a.pause()});ui(false)}
+  function first(){
+    ['click','touchend','keydown'].forEach(function(e){removeEventListener(e,first,true)});
+    if(want&&a.paused)play();
+  }
+  ['click','touchend','keydown'].forEach(function(e){addEventListener(e,first,true)});
+  b.addEventListener('click',function(ev){
+    ev.stopPropagation();
+    if(a.paused||!b.getAttribute('aria-pressed')||b.getAttribute('aria-pressed')==='false'){want=true;try{localStorage.setItem('music','on')}catch(e){};play()}
+    else{want=false;try{localStorage.setItem('music','off')}catch(e){};stop()}
+  });
+  document.addEventListener('visibilitychange',function(){
+    if(document.hidden){if(!a.paused)a.pause()}
+    else if(want&&started&&a.paused){a.volume=VOL;a.play().catch(function(){ui(false)})}
+  });
+  a.addEventListener('error',function(){b.classList.remove('ld');ui(false)});
+})();
+</script>
+</body>
+</html>
