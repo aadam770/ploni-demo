@@ -923,7 +923,7 @@ html[lang=ru] .cdate .d1{font-family:'Noto Serif Display','Noto Serif',serif}
 </script>
 <script>
 (function(){
-  var a=document.getElementById('bgm'),b=document.getElementById('snd'),VOL=.4,want=true,fade=null,started=false;
+  var a=document.getElementById('bgm'),b=document.getElementById('snd'),VOL=.3,want=true,fade=null,started=false;
   try{if(localStorage.getItem('music')==='off')want=false}catch(e){}
   function ui(on){b.setAttribute('aria-pressed',on?'true':'false')}
   function fadeTo(v,ms,done){clearInterval(fade);var s0=a.volume,t0=Date.now();fade=setInterval(function(){var k=Math.min(1,(Date.now()-t0)/ms);a.volume=Math.max(0,Math.min(1,s0+(v-s0)*k));if(k>=1){clearInterval(fade);done&&done()}},50)}
